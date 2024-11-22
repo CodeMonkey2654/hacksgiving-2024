@@ -2,17 +2,19 @@ import { Paper, Typography, Stack, Box } from '@mui/material';
 import TopicSlider from './TopicSlider';
 
 type Topic = {
-  id: 'physics' | 'chemistry' | 'biology' | 'astronomy';
+  id: 'history' | 'science' | 'nature' | 'engineering' | 'arts' | 'interactive';
   label: string;
-  icon: string;
+  icon: string; 
   color: string;
 };
 
 const TOPICS = [
-  { id: 'physics', label: 'Physics', icon: '⚛️', color: '#60A5FA' },
-  { id: 'chemistry', label: 'Chemistry', icon: '🧪', color: '#C084FC' },
-  { id: 'biology', label: 'Biology', icon: '🧬', color: '#F472B6' },
-  { id: 'astronomy', label: 'Astronomy', icon: '🔭', color: '#818CF8' },
+  { id: 'history', label: 'History & Culture', icon: '🏺', color: '#60A5FA' },
+  { id: 'science', label: 'Science & Technology', icon: '🔬', color: '#C084FC' },
+  { id: 'nature', label: 'Nature & Environment', icon: '🌿', color: '#F472B6' },
+  { id: 'engineering', label: 'Engineering & Machines', icon: '⚙️', color: '#818CF8' },
+  { id: 'arts', label: 'Arts & Music', icon: '🎨', color: '#34D399' },
+  { id: 'interactive', label: 'Interactive Activities', icon: '🤝', color: '#FBBF24' },
 ] as const;
 
 interface TopicInterestsProps {
@@ -36,9 +38,6 @@ const TopicInterests: React.FC<TopicInterestsProps> = ({ topicInterests, handleI
     <Stack spacing={3}>
       {TOPICS.map(topic => (
         <Box key={topic.id}>
-          <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 1 }}>
-            {topic.icon} {topic.label}
-          </Typography>
           <TopicSlider
             topic={topic}
             value={topicInterests[topic.id]}

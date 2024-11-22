@@ -129,13 +129,14 @@ export default function TourPage({ exhibit }: TourPageProps) {
   return (
     <Box sx={{ py: 4 }}>
       <Container maxWidth="xl">
-        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mt: 4 }}>
           {/* Main Content */}
           <Box sx={{ flex: '2 1 auto', minWidth: 0 }}>
             <ExhibitDetails 
               exhibit={exhibit} 
               complexityLevel={getComplexityLevel(complexity)} 
             />
+            <RecommendedExhibits exhibits={recommendedExhibits} />
           </Box>
 
           {/* Chat & Recommendations */}
@@ -157,8 +158,6 @@ export default function TourPage({ exhibit }: TourPageProps) {
                 setNewMessage={setNewMessage}
                 handleSendMessage={handleSendMessage}
               />
-
-              <RecommendedExhibits exhibits={recommendedExhibits} />
 
               <FeedbackSection
                 rating={rating}

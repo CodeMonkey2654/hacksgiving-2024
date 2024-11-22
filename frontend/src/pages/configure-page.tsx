@@ -7,10 +7,12 @@ import GradientTypography from '../components/GradientTypography'
 import StartJourneyButton from '../components/StartJourneyButton'
 
 const TOPICS = [
-  { id: 'physics', label: 'Physics', icon: '⚛️', color: '#60A5FA' },
-  { id: 'chemistry', label: 'Chemistry', icon: '🧪', color: '#C084FC' }, 
-  { id: 'biology', label: 'Biology', icon: '🧬', color: '#F472B6' },
-  { id: 'astronomy', label: 'Astronomy', icon: '🔭', color: '#818CF8' },
+  { id: 'history', label: 'History & Culture', icon: '🏺', color: '#60A5FA' },
+  { id: 'science', label: 'Science & Technology', icon: '🔬', color: '#C084FC' },
+  { id: 'nature', label: 'Nature & Environment', icon: '🌿', color: '#F472B6' },
+  { id: 'engineering', label: 'Engineering & Machines', icon: '⚙️', color: '#818CF8' },
+  { id: 'arts', label: 'Arts & Music', icon: '🎨', color: '#34D399' },
+  { id: 'interactive', label: 'Interactive Activities', icon: '🤝', color: '#FBBF24' },
 ] as const;
 
 export default function ConfigurePage() {
