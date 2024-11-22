@@ -1,121 +1,83 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from recommender import ExhbitRecommender  # Add this import
-from typing import Dict, List, Optional
-from datetime import datetime
-import uvicorn
-import json
-from user import User
+from fastapi import FastAPI, Depends, HTTPException
+from sqlalchemy.orm import Session
+from typing import List
+import crud
+from database import engine, Base
+from schemas import Topic, TopicCreate, Exhibit, ExhibitCreate, User, UserCreate, Visit, VisitCreate
+from dependencies import get_db
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-class UserData(BaseModel):
-    physics_interest: int = 0
-    chemistry_interest: int = 0
-    astronomy_interest: int = 0
-    biology_interest: int = 0
-    language: str = 'English'
-    reading_level: str = 'beginner'
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-class UserPreferences(BaseModel):
-    interests: Dict[str, int]
-    experience_level: str
-    visit_history: Optional[Dict[str, List[datetime]]] = None
-    include_visited: Optional[bool] = True
+# Topics endpoints
+@app.get("/api/topics", response_model=List[Topic])
+def get_topics(db: Session = Depends(get_db)):
+    return crud.get_topics(db)
 
-@app.get('/')
-def root():
-    return {'message': 'Hello, World!'}
+@app.post("/api/topics", response_model=Topic)
+def create_topic(topic: TopicCreate, db: Session = Depends(get_db)):
+    return crud.create_topic(db, topic)
 
-@app.post('/create_user')
-def create_user(data: UserData):
-    """
-    API endpoint to create a User instance from the provided data.
-    Expects a JSON payload with interest levels, language, and reading level.
-    """
-    # Create a User instance
-    user = User(data.physics_interest, data.chemistry_interest, data.astronomy_interest, data.biology_interest, data.language, data.reading_level)
+@app.put("/api/topics/{topic_id}", response_model=Topic)
+def update_topic(topic_id: str, topic: TopicCreate, db: Session = Depends(get_db)):
+    return crud.update_topic(db, topic_id, topic)
 
-    # Return a success response with user details
-    return {
-        'message': 'User created successfully!',
-        'user': {
-            'interests': user.get_interests(),
-            'language': user.get_language(),
-            'reading_level': user.get_reading_level()
-        }
-    }
-
-@app.get('/get_exhibit_info')
-def get_exhibit_info():
-    with open('exhibit_info.json', 'r') as file:
-        exhibit_info = json.load(file)
-    return exhibit_info
-
-@app.post("/get_recommendations")
-async def get_recommendations(preferences: UserPreferences):
-    recommender = ExhbitRecommender()
-    try:
-        recommendations = recommender.get_recommendations(
-            preferences.interests,
-            preferences.experience_level,
-            preferences.visit_history,
-            include_visited=preferences.include_visited
-        )
-        return {"recommendations": recommendations}
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
-
-@app.post("/record_visit/{user_id}/{exhibit_id}")
-async def record_visit(user_id: str, exhibit_id: str):
-    try:
-        # Assuming you have a way to get user object
-        user = get_user(user_id)  # You'll need to implement this
-        user.record_visit(exhibit_id)
-        return {"status": "success"}
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
-
-@app.get('/api/topics')
-async def get_topics():
-    # Implement fetching topics from your database
-    return TOPICS
-
-@app.post('/api/topics')
-async def create_topic(topic: dict):
-    # Implement creating a new topic
-    return topic
-
-@app.put('/api/topics/{topic_id}')
-async def update_topic(topic_id: str, topic: dict):
-    # Implement updating an existing topic
-    return topic
-
-@app.delete('/api/topics/{topic_id}')
-async def delete_topic(topic_id: str):
-    # Implement deleting a topic
+@app.delete("/api/topics/{topic_id}")
+def delete_topic(topic_id: str, db: Session = Depends(get_db)):
+    crud.delete_topic(db, topic_id)
     return {"status": "success"}
 
-# Similar endpoints for exhibits
-@app.get('/api/exhibits')
-async def get_exhibits():
-    # Implement fetching exhibits from your database
-    return exhibits
+# Exhibits endpoints
+@app.get("/api/exhibits", response_model=List[Exhibit])
+def get_exhibits(db: Session = Depends(get_db)):
+    return crud.get_exhibits(db)
 
-@app.post('/api/exhibits')
-async def create_exhibit(exhibit: dict):
-    # Implement creating a new exhibit
+@app.get("/api/exhibits/{exhibit_id}", response_model=Exhibit)
+def get_exhibit(exhibit_id: str, db: Session = Depends(get_db)):
+    exhibit = crud.get_exhibit(db, exhibit_id)
+    if exhibit is None:
+        raise HTTPException(status_code=404, detail="Exhibit not found")
     return exhibit
 
-@app.put('/api/exhibits/{exhibit_id}')
-async def update_exhibit(exhibit_id: str, exhibit: dict):
-    # Implement updating an existing exhibit
-    return exhibit
+@app.post("/api/exhibits", response_model=Exhibit)
+def create_exhibit(exhibit: ExhibitCreate, db: Session = Depends(get_db)):
+    return crud.create_exhibit(db, exhibit)
 
-@app.delete('/api/exhibits/{exhibit_id}')
-async def delete_exhibit(exhibit_id: str):
-    # Implement deleting an exhibit
+@app.put("/api/exhibits/{exhibit_id}", response_model=Exhibit)
+def update_exhibit(exhibit_id: str, exhibit: ExhibitCreate, db: Session = Depends(get_db)):
+    return crud.update_exhibit(db, exhibit_id, exhibit)
+
+@app.delete("/api/exhibits/{exhibit_id}")
+def delete_exhibit(exhibit_id: str, db: Session = Depends(get_db)):
+    crud.delete_exhibit(db, exhibit_id)
     return {"status": "success"}
 
-if __name__ == '__main__':
-    uvicorn.run(app, host='0.0.0.0', port=8000)
+# Users endpoints
+@app.post("/api/users", response_model=User)
+def create_user(user: UserCreate, db: Session = Depends(get_db)):
+    return crud.create_user(db, user)
+
+@app.get("/api/users/{user_id}", response_model=User)
+def get_user(user_id: str, db: Session = Depends(get_db)):
+    user = crud.get_user(db, user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
+
+# Visits endpoints
+@app.post("/api/visits", response_model=Visit)
+def record_visit(visit: VisitCreate, db: Session = Depends(get_db)):
+    return crud.create_visit(db, visit)
+
+@app.get("/api/users/{user_id}/visits", response_model=List[Visit])
+def get_user_visits(user_id: str, db: Session = Depends(get_db)):
+    return crud.get_user_visits(db, user_id)

@@ -32,7 +32,6 @@ interface Exhibit {
 interface TourPageProps {
   exhibit: Exhibit;
 }
-
 export default function TourPage({ exhibit }: TourPageProps) {
   console.log({ exhibit })
   const [messages, setMessages] = useState([
@@ -64,7 +63,6 @@ export default function TourPage({ exhibit }: TourPageProps) {
     if (value <= 80) return 'college'
     return 'expert'
   }
-
   const recommendedExhibits = [
     {
       id: "2",
@@ -119,7 +117,6 @@ export default function TourPage({ exhibit }: TourPageProps) {
       }])
     }, 1000)
   }
-
   const handleSubmitFeedback = () => {
     console.log({ exhibitId: exhibit.id, rating, feedback })
     setRating(null)
