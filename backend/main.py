@@ -39,7 +39,7 @@ def create_user(data: UserData):
 
 @app.get('/get_exhibit_info')
 def get_exhibit_info():
-    with open('exibit_info.json', 'r') as file:
+    with open('exhibit_info.json', 'r') as file:
         exhibit_info = json.load(file)
     return exhibit_info
 
