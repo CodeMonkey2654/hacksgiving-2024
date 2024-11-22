@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import uvicorn
+import json
 from user import User
 
 app = FastAPI()
@@ -12,6 +13,10 @@ class UserData(BaseModel):
     biology_interest: int = 0
     language: str = 'English'
     reading_level: str = 'beginner'
+
+@app.get('/')
+def root():
+    return {'message': 'Hello, World!'}
 
 @app.post('/create_user')
 def create_user(data: UserData):
@@ -31,6 +36,12 @@ def create_user(data: UserData):
             'reading_level': user.get_reading_level()
         }
     }
+
+@app.get('/get_exhibit_info')
+def get_exhibit_info():
+    with open('exibit_info.json', 'r') as file:
+        exhibit_info = json.load(file)
+    return exhibit_info
 
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0', port=8000)
