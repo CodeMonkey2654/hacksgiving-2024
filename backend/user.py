@@ -1,3 +1,6 @@
+from datetime import datetime
+from typing import Dict, List
+
 class User:
     def __init__(self, physics_interest: int, chemistry_interest: int, 
                  astronomy_interest: int, biology_interest: int, 
@@ -56,6 +59,27 @@ class User:
         Sets the user's reading level.
         """
         self.reading_level = reading_level
+
+
+    def record_visit(self, exhibit_id: str) -> None:
+        """
+        Record a visit to an exhibit
+        """
+        if exhibit_id not in self.visit_history:
+            self.visit_history[exhibit_id] = []
+        self.visit_history[exhibit_id].append(datetime.now())
+    
+    def get_visit_history(self) -> Dict[str, List[datetime]]:
+        """
+        Get the user's visit history
+        """
+        return self.visit_history
+    
+    def has_visited(self, exhibit_id: str) -> bool:
+        """
+        Check if user has visited an exhibit
+        """
+        return exhibit_id in self.visit_history
 
     def __str__(self):
         """
