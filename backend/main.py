@@ -76,5 +76,46 @@ async def record_visit(user_id: str, exhibit_id: str):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
+@app.get('/api/topics')
+async def get_topics():
+    # Implement fetching topics from your database
+    return TOPICS
+
+@app.post('/api/topics')
+async def create_topic(topic: dict):
+    # Implement creating a new topic
+    return topic
+
+@app.put('/api/topics/{topic_id}')
+async def update_topic(topic_id: str, topic: dict):
+    # Implement updating an existing topic
+    return topic
+
+@app.delete('/api/topics/{topic_id}')
+async def delete_topic(topic_id: str):
+    # Implement deleting a topic
+    return {"status": "success"}
+
+# Similar endpoints for exhibits
+@app.get('/api/exhibits')
+async def get_exhibits():
+    # Implement fetching exhibits from your database
+    return exhibits
+
+@app.post('/api/exhibits')
+async def create_exhibit(exhibit: dict):
+    # Implement creating a new exhibit
+    return exhibit
+
+@app.put('/api/exhibits/{exhibit_id}')
+async def update_exhibit(exhibit_id: str, exhibit: dict):
+    # Implement updating an existing exhibit
+    return exhibit
+
+@app.delete('/api/exhibits/{exhibit_id}')
+async def delete_exhibit(exhibit_id: str):
+    # Implement deleting an exhibit
+    return {"status": "success"}
+
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0', port=8000)

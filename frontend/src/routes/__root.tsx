@@ -1,6 +1,7 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
-import { Container, Box } from '@mui/material'
+import { Box } from '@mui/material'
+import Navbar from '../components/Navbar'
 
 export const Route = createRootRoute({
   component: () => (
@@ -11,11 +12,10 @@ export const Route = createRootRoute({
           background: 'linear-gradient(135deg, #0f1642 0%, #2a1650 50%, #3a1357 100%)',
         }}
       >
-        <Container>
-          <Box sx={{ pt: 3 }}>
-            <Outlet />
-          </Box>
-        </Container>
+        <Navbar />
+        <Box sx={{ pt: 3 }}>
+          <Outlet />
+        </Box>
       </Box>
       <TanStackRouterDevtools />
     </>
