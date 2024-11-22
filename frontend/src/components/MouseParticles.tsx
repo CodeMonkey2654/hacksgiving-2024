@@ -59,19 +59,93 @@ const MouseParticles = () => {
 
   const getRandomColor = () => {
     const colors = [
+      '#FF0000', // Red
+      '#00FF00', // Green
+      '#0000FF', // Blue
+      '#FFFF00', // Yellow
+      '#FF00FF', // Magenta
+      '#00FFFF', // Cyan
       '#FFD700', // Gold
-      '#F8F8FF', // White
-      '#87CEEB', // Sky Blue
-      '#E6E6FA', // Lavender
-      '#FFF8DC', // Cream
+      '#FF69B4', // Hot Pink
+      '#7FFF00', // Chartreuse
+      '#9400D3', // Violet
     ];
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
-  const createParticle = useCallback((x: number, y: number) => {
+  const createFirework = useCallback((x: number, y: number) => {
+    // Create multiple clusters
+    for (let cluster = 0; cluster < 3; cluster++) {
+      setTimeout(() => {
+        const particleCount = 20;
+        const angleStep = (2 * Math.PI) / particleCount;
+        const speed = 2; // Reduced speed further
+        const clusterOffsetX = (Math.random() - 0.5) * 50;
+        const clusterOffsetY = (Math.random() - 0.5) * 50;
+        const clusterColor = getRandomColor();
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement('div');
+          const size = Math.random() * 3 + 2;
+          const angle = angleStep * i + (Math.random() - 0.5) * 0.5;
+          const velocity = {
+            x: Math.cos(angle) * speed * (0.8 + Math.random() * 0.4),
+            y: Math.sin(angle) * speed * (0.8 + Math.random() * 0.4)
+          };
+
+          particle.style.position = 'fixed';
+          particle.style.left = `${x + clusterOffsetX}px`;
+          particle.style.top = `${y + clusterOffsetY}px`;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.backgroundColor = clusterColor;
+          particle.style.borderRadius = '50%';
+          particle.style.pointerEvents = 'none';
+          particle.style.zIndex = '9999';
+          particle.style.boxShadow = `0 0 ${size * 2}px ${size}px ${clusterColor}`;
+          
+          document.body.appendChild(particle);
+
+          const startTime = performance.now();
+          const duration = 800; // Reduced duration
+          const gravity = 0.04; // Reduced gravity further
+
+          function animate(currentTime: number) {
+            const elapsed = currentTime - startTime;
+            const progress = elapsed / duration;
+
+            if (progress >= 1) {
+              particle.remove();
+              return;
+            }
+
+            // Calculate new position
+            const posX = x + clusterOffsetX + velocity.x * elapsed * 0.7;
+            let posY = y + clusterOffsetY + velocity.y * elapsed + (0.5 * gravity * elapsed * elapsed);
+
+            // Prevent particles from going below initial Y position
+            if (posY > y) {
+              posY = y;
+            }
+
+            const scale = 1 - progress;
+            const opacity = 1 - (progress * 1.5); // Faster fade out
+
+            particle.style.transform = `translate(${posX - x - clusterOffsetX}px, ${posY - y - clusterOffsetY}px) scale(${scale})`;
+            particle.style.opacity = Math.max(0, opacity).toString();
+
+            requestAnimationFrame(animate);
+          }
+
+          requestAnimationFrame(animate);
+        }
+      }, cluster * 100); // Reduced cluster delay
+    }
+  }, []);
+
+  const createTrailParticle = useCallback((x: number, y: number) => {
     const particle = document.createElement('div');
-    const size = Math.random() * 6 + 2;
-    const angle = Math.random() * 360;
+    const size = Math.random() * 4 + 2;
 
     particle.style.position = 'fixed';
     particle.style.left = `${x}px`;
@@ -83,66 +157,27 @@ const MouseParticles = () => {
     particle.style.pointerEvents = 'none';
     particle.style.zIndex = '9999';
     particle.style.boxShadow = `0 0 ${size}px ${size/2}px ${getRandomColor()}`;
-    particle.style.filter = 'blur(0.5px)';
     
     document.body.appendChild(particle);
-
-    const style = document.createElement('style');
-    const uniqueId = `particle-${Date.now()}-${Math.random()}`;
-    particle.classList.add(uniqueId);
-    
-    style.textContent = `
-      .${uniqueId}::before,
-      .${uniqueId}::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: inherit;
-        border-radius: inherit;
-        transform: rotate(45deg);
-      }
-      .${uniqueId}::after {
-        transform: rotate(-45deg);
-      }
-    `;
-    document.head.appendChild(style);
 
     const animation = particle.animate(
       [
         { 
-          transform: `rotate(${angle}deg) scale(1)`,
+          transform: 'scale(1)',
           opacity: 1,
-          filter: 'brightness(1.5)',
-        },
-        {
-          transform: `rotate(${angle + 90}deg) scale(0.8)`,
-          opacity: 0.8,
-          filter: 'brightness(2)',
-          offset: 0.3
-        },
-        {
-          transform: `rotate(${angle + 180}deg) scale(0.5)`,
-          opacity: 0.4,
-          filter: 'brightness(1.5)',
-          offset: 0.6
         },
         { 
-          transform: `rotate(${angle + 360}deg) scale(0)`,
+          transform: 'scale(0)',
           opacity: 0,
-          filter: 'brightness(1)',
         }
       ],
       {
-        duration: 1500,
-        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        duration: 300, // Reduced duration
+        easing: 'ease-out',
       }
     );
 
-    animation.onfinish = () => {
-      particle.remove();
-      style.remove();
-    };
+    animation.onfinish = () => particle.remove();
   }, []);
 
   useEffect(() => {
@@ -152,20 +187,25 @@ const MouseParticles = () => {
     const handleMouseMove = (e: MouseEvent) => {
       const currentTime = Date.now();
       if (currentTime - lastTime > throttleDelay) {
-        for (let i = 0; i < 2; i++) {
-          const offsetX = (Math.random() - 0.5) * 10;
-          const offsetY = (Math.random() - 0.5) * 10;
-          createParticle(e.clientX + offsetX, e.clientY + offsetY);
-        }
+        createTrailParticle(e.clientX, e.clientY);
         lastTime = currentTime;
       }
     };
 
+    const handleClick = (e: MouseEvent) => {
+      createFirework(e.clientX, e.clientY);
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [createParticle]);
+    window.addEventListener('click', handleClick);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('click', handleClick);
+    };
+  }, [createTrailParticle, createFirework]);
 
   return null;
 };
 
-export default MouseParticles; 
+export default MouseParticles;
