@@ -1,5 +1,6 @@
 from typing import Dict, Optional
 from enum import Enum
+from database import Database
 
 class Topic(Enum):
     PHYSICS = "physics"
@@ -47,31 +48,37 @@ class Exhibit:
     def __str__(self):
         return f"Exhibit(id={self.exhibit_id}, title={self.title}, topic={self.topic.value})"
 
-# Example usage:
-def initialize_exhibits():
+# ... existing code ...
+
+def initialize_exhibits(db: Database):
     """
-    Initialize some example exhibits.
+    Initialize example exhibits in the database
     """
-    Exhibit.get_exhibit(
-        "PHY001",
-        "Newton's Laws of Motion",
-        "Interactive demonstration of Newton's three laws of motion",
-        "/images/newton_laws.jpg",
-        Topic.PHYSICS
-    )
+    exhibits = [
+        Exhibit(
+            "PHY001",
+            "Newton's Laws of Motion",
+            "Interactive demonstration of Newton's three laws of motion",
+            "/images/newton_laws.jpg",
+            Topic.PHYSICS
+        ),
+        Exhibit(
+            "CHEM001",
+            "Periodic Table Interactive",
+            "Explore the periodic table of elements",
+            "/images/periodic_table.jpg",
+            Topic.CHEMISTRY
+        ),
+        Exhibit(
+            "AST001",
+            "Solar System Model",
+            "Scale model of our solar system",
+            "/images/solar_system.jpg",
+            Topic.ASTRONOMY
+        )
+    ]
     
-    Exhibit.get_exhibit(
-        "CHEM001",
-        "Periodic Table Interactive",
-        "Explore the periodic table of elements",
-        "/images/periodic_table.jpg",
-        Topic.CHEMISTRY
-    )
-    
-    Exhibit.get_exhibit(
-        "AST001",
-        "Solar System Model",
-        "Scale model of our solar system",
-        "/images/solar_system.jpg",
-        Topic.ASTRONOMY
-    )
+    for exhibit in exhibits:
+        db.add_exhibit(exhibit)
+
+        
