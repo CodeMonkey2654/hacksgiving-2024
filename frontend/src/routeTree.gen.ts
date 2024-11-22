@@ -19,6 +19,7 @@ import { Route as ExhibitExhibitIdImport } from './routes/exhibit.$exhibitId'
 
 const ExhibitsLazyImport = createFileRoute('/exhibits')()
 const ConfigureLazyImport = createFileRoute('/configure')()
+const AdminLazyImport = createFileRoute('/admin')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
@@ -34,6 +35,12 @@ const ConfigureLazyRoute = ConfigureLazyImport.update({
   path: '/configure',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/configure.lazy').then((d) => d.Route))
+
+const AdminLazyRoute = AdminLazyImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/admin.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   id: '/',
@@ -56,6 +63,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminLazyImport
       parentRoute: typeof rootRoute
     }
     '/configure': {
@@ -86,6 +100,7 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
+  '/admin': typeof AdminLazyRoute
   '/configure': typeof ConfigureLazyRoute
   '/exhibits': typeof ExhibitsLazyRoute
   '/exhibit/$exhibitId': typeof ExhibitExhibitIdRoute
@@ -93,6 +108,7 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
+  '/admin': typeof AdminLazyRoute
   '/configure': typeof ConfigureLazyRoute
   '/exhibits': typeof ExhibitsLazyRoute
   '/exhibit/$exhibitId': typeof ExhibitExhibitIdRoute
@@ -101,6 +117,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexLazyRoute
+  '/admin': typeof AdminLazyRoute
   '/configure': typeof ConfigureLazyRoute
   '/exhibits': typeof ExhibitsLazyRoute
   '/exhibit/$exhibitId': typeof ExhibitExhibitIdRoute
@@ -108,15 +125,22 @@ export interface FileRoutesById {
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/configure' | '/exhibits' | '/exhibit/$exhibitId'
+  fullPaths: '/' | '/admin' | '/configure' | '/exhibits' | '/exhibit/$exhibitId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/configure' | '/exhibits' | '/exhibit/$exhibitId'
-  id: '__root__' | '/' | '/configure' | '/exhibits' | '/exhibit/$exhibitId'
+  to: '/' | '/admin' | '/configure' | '/exhibits' | '/exhibit/$exhibitId'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/configure'
+    | '/exhibits'
+    | '/exhibit/$exhibitId'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
+  AdminLazyRoute: typeof AdminLazyRoute
   ConfigureLazyRoute: typeof ConfigureLazyRoute
   ExhibitsLazyRoute: typeof ExhibitsLazyRoute
   ExhibitExhibitIdRoute: typeof ExhibitExhibitIdRoute
@@ -124,6 +148,7 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
+  AdminLazyRoute: AdminLazyRoute,
   ConfigureLazyRoute: ConfigureLazyRoute,
   ExhibitsLazyRoute: ExhibitsLazyRoute,
   ExhibitExhibitIdRoute: ExhibitExhibitIdRoute,
@@ -140,6 +165,7 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/admin",
         "/configure",
         "/exhibits",
         "/exhibit/$exhibitId"
@@ -147,6 +173,9 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.lazy.tsx"
+    },
+    "/admin": {
+      "filePath": "admin.lazy.tsx"
     },
     "/configure": {
       "filePath": "configure.lazy.tsx"
