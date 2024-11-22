@@ -9,3 +9,4 @@ __pycache__
 .venv
 .idea
 venv
+src/secrets.json
