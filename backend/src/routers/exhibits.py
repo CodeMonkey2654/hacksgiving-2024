@@ -6,7 +6,7 @@ from database.schemas import Exhibit, ExhibitCreate
 from dependencies import get_db
 
 router = APIRouter(
-    prefix="/api/exhibits",
+    prefix="/exhibits",
     tags=["exhibits"]
 )
 

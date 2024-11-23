@@ -6,7 +6,7 @@ from database.schemas import Visit, VisitCreate
 from dependencies import get_db
 
 router = APIRouter(
-    prefix="/api/visits",
+    prefix="/visits",
     tags=["visits"]
 )
 

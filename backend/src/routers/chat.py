@@ -1,16 +1,18 @@
 from fastapi import APIRouter, Depends, HTTPException, Body
 from sqlalchemy.orm import Session
 import database.crud as crud
-from chat import ChatSession
+from ai.chat import ChatKnowledgeBase, ChatManager
 import json
 from dependencies import get_db
 
 router = APIRouter(
-    prefix="/api/chat",
+    prefix="/chat",
     tags=["chat"]
 )
 
-chat_sessions = {}
+# Initialize knowledge base and chat manager
+knowledge_base = ChatKnowledgeBase()
+chat_manager = ChatManager(knowledge_base)
 
 @router.post("/{user_id}/{session_id}")
 def chat_with_exhibit(
@@ -24,20 +26,31 @@ def chat_with_exhibit(
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
     
-    # Create new chat session if doesn't exist
-    if session_id not in chat_sessions:
-        interests = json.loads(user.interests)
-        chat_sessions[session_id] = ChatSession(
-            interests=interests,
-            complexity=100 if user.reading_level == "advanced" else 50 if user.reading_level == "intermediate" else 25
-        )
+    # Parse user interests
+    interests = json.loads(user.interests)
     
-    # Get response from chat session
-    response = chat_sessions[session_id].chat(
-        user_input=message,
-        language=user.language
+    # Calculate complexity based on reading level
+    complexity = {
+        "advanced": 100,
+        "intermediate": 50,
+        "beginner": 25
+    }.get(user.reading_level, 25)
+    
+    # Get or create chat session
+    chat_manager.get_or_create_session(
+        session_id=session_id,
+        interests=interests,
+        complexity=complexity
     )
     
-    return {
-        "response": response
-    }
+    # Get response from chat manager
+    try:
+        response = chat_manager.chat(
+            session_id=session_id,
+            user_input=message,
+            language=user.language
+        )
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    
+    return {"response": response}

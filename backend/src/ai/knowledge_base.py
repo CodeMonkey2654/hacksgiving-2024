@@ -1,70 +1,71 @@
-import faiss
-import numpy as np
 from typing import List, Tuple, Dict
 from database.models import Exhibit
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.vector_stores.faiss import FaissVectorStore
+from llama_index.core import VectorStoreIndex, Document, Settings
+import faiss
 
 class ExhibitKnowledgeBase:
-    def __init__(self, dimension: int = 128):
-        """Initialize the knowledge base with FAISS index
+    def __init__(self):
+        """Initialize the knowledge base with LlamaIndex and FAISS"""
+        # Configure global settings
+        Settings.embed_model = OpenAIEmbedding()
         
-        Args:
-            dimension: Dimension of the exhibit embedding vectors
-        """
-        self.dimension = dimension
-        self.index = faiss.IndexFlatL2(dimension)  # Using L2 distance for similarity
-        self.exhibit_map: Dict[int, str] = {}  # Maps FAISS index positions to exhibit IDs
+        # Initialize FAISS index with L2 distance
+        faiss_index = faiss.IndexFlatL2(1536) # 1536 is OpenAI embedding dimension
+        self.vector_store = FaissVectorStore(faiss_index=faiss_index)
         
-    def add_exhibits(self, exhibits: List[Exhibit], embeddings: np.ndarray) -> None:
-        """Add exhibits and their embeddings to the knowledge base
+        self.exhibit_map: Dict[str, Exhibit] = {}
+        self.index = None
+        
+    def add_exhibits(self, exhibits: List[Exhibit]) -> None:
+        """Add exhibits to the knowledge base
         
         Args:
             exhibits: List of Exhibit objects to add
-            embeddings: numpy array of embeddings with shape (n_exhibits, dimension)
         """
-        if len(exhibits) != embeddings.shape[0]:
-            raise ValueError("Number of exhibits must match number of embeddings")
+        documents = []
+        for exhibit in exhibits:
+            text = f"{exhibit.title}. {exhibit.description}"
+            doc = Document(text=text, id_=exhibit.id)
+            documents.append(doc)
+            self.exhibit_map[exhibit.id] = exhibit
             
-        if embeddings.shape[1] != self.dimension:
-            raise ValueError(f"Embeddings must have dimension {self.dimension}")
+        # Create or update index
+        if self.index is None:
+            self.index = VectorStoreIndex.from_documents(
+                documents,
+                vector_store=self.vector_store
+            )
+        else:
+            self.index.insert_nodes(documents)
             
-        # Convert embeddings to float32 as required by FAISS
-        embeddings = embeddings.astype(np.float32)
-        
-        # Store mapping of FAISS indices to exhibit IDs
-        start_idx = self.index.ntotal
-        for i, exhibit in enumerate(exhibits):
-            self.exhibit_map[start_idx + i] = exhibit.id
-            
-        # Add embeddings to FAISS index    
-        self.index.add(embeddings)
-        
-    def find_similar_exhibits(self, query_embedding: np.ndarray, k: int = 5) -> List[Tuple[str, float]]:
-        """Find k most similar exhibits to query embedding
+    def find_similar_exhibits(self, query: str, k: int = 5) -> List[Tuple[str, float]]:
+        """Find k most similar exhibits to text query
         
         Args:
-            query_embedding: Query vector of dimension D
+            query: Text query to find similar exhibits for
             k: Number of similar exhibits to return
             
         Returns:
-            List of tuples containing (exhibit_id, distance)
+            List of tuples containing (exhibit_id, similarity_score)
         """
-        # Ensure query has correct shape and type
-        query_embedding = query_embedding.astype(np.float32).reshape(1, -1)
-        
-        if query_embedding.shape[1] != self.dimension:
-            raise ValueError(f"Query embedding must have dimension {self.dimension}")
+        if self.index is None:
+            return []
             
-        # Search index
-        distances, indices = self.index.search(query_embedding, k)
+        # Query the index
+        retriever = self.index.as_retriever(similarity_top_k=k)
+        nodes = retriever.retrieve(query)
         
-        # Convert to list of (exhibit_id, distance) tuples
+        # Convert to list of (exhibit_id, score) tuples
         results = []
-        for distance, idx in zip(distances[0], indices[0]):
-            if idx in self.exhibit_map:  # Check if index exists
-                results.append((self.exhibit_map[idx], float(distance)))
-                
+        for node in nodes:
+            exhibit_id = node.node.id_
+            score = node.score if hasattr(node, 'score') else 0.0
+            results.append((exhibit_id, float(score)))
+            
         return results
         
     def __len__(self) -> int:
         """Return number of exhibits in knowledge base"""
-        return self.index.ntotal
+        return len(self.exhibit_map)
