@@ -82,7 +82,7 @@ export default function HomePage() {
               fontSize: { xs: '2rem', sm: '3rem', md: '3.75rem' },
             }}
           >
-            Discovery World
+              <span className="notranslate" translate="no" lang="en" data-no-translate="true">Discovery World</span>
           </Typography>
 
           <Typography

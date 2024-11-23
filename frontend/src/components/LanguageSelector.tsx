@@ -10,18 +10,21 @@ const LanguageSelector: React.FC = () => {
     const targetLang = event.target.value;
     setSelectedLanguage(targetLang);
     localStorage.setItem('language', targetLang);
-
-    // Translate the entire document body
+  
     const elements = Array.from(document.body.querySelectorAll('*'));
-
+  
     for (const element of elements) {
+      // Skip elements with the notranslate class or data-no-translate attribute
+      if (element.classList.contains('notranslate') || element.getAttribute('data-no-translate') === 'true') {
+        continue;
+      }
+  
       if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
         const originalText = element.textContent || '';
         const translatedText = await translateText(originalText, targetLang);
         element.textContent = translatedText;
       }
     }
-    
   };
 
   return (
