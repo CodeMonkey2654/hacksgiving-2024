@@ -1,7 +1,10 @@
 import {
   Box,  
   Stack,
-  Container
+  Container,
+  CircularProgress,
+  Typography,
+  Fade
 } from '@mui/material'
 import { useState, useEffect } from 'react'
 import ExhibitDetails from '../components/ExhibitDetails'
@@ -10,7 +13,7 @@ import TopicInterests from '../components/TopicInterests'
 import ChatWindow from '../components/ChatWindow'
 import RecommendedExhibits from '../components/RecommendedExhibits'
 import FeedbackSection from '../components/FeedbackSection'
-import { useExhibit, useRecommendations, useSendMessage } from '../api/queries'
+import { useExhibit, useRecommendations, useChatWithExhibit, useExhibitDescription, useRecordVisit } from '../api/queries'
 
 interface TourPageProps {
   exhibitId: string;
@@ -18,9 +21,11 @@ interface TourPageProps {
 }
 
 export default function TourPage({ exhibitId, userId }: TourPageProps) {
-  const { data: exhibit } = useExhibit(exhibitId)
+  const { data: exhibit, isLoading: isExhibitLoading } = useExhibit(exhibitId)
+  const { data: exhibitDescription, isLoading: isDescriptionLoading } = useExhibitDescription(exhibitId)
   const { data: recommendedExhibits } = useRecommendations(userId)
-  const sendMessage = useSendMessage()
+  const chatMutation = useChatWithExhibit()
+  const recordVisit = useRecordVisit();
 
   const [messages, setMessages] = useState([
     {
@@ -44,14 +49,6 @@ export default function TourPage({ exhibitId, userId }: TourPageProps) {
     }
   })
 
-  const getComplexityLevel = (value: number) => {
-    if (value <= 20) return 'elementary'
-    if (value <= 40) return 'middle-school'
-    if (value <= 60) return 'high-school'
-    if (value <= 80) return 'college'
-    return 'expert'
-  }
-
   useEffect(() => {
     localStorage.setItem('complexity', complexity.toString())
   }, [complexity])
@@ -68,26 +65,28 @@ export default function TourPage({ exhibitId, userId }: TourPageProps) {
   }
 
   const handleSendMessage = async () => {
-    if (!newMessage.trim()) return
+    if (!newMessage.trim()) return;
 
-    setMessages([...messages, { text: newMessage, isBot: false }])
-    setNewMessage('')
+    setMessages([...messages, { text: newMessage, isBot: false }]);
+    setNewMessage('');
 
     try {
-      const response = await sendMessage.mutateAsync({
-        session_id: exhibitId,
-        user_input: newMessage,
-        language: 'en'
-      })
+      const response = await chatMutation.mutateAsync({
+        message: newMessage,
+        sessionId: exhibitId,
+        interests: topicInterests,
+        complexity: complexity,
+        language: localStorage.getItem('language') || 'en'
+      });
 
       setMessages(prev => [...prev, {
         text: response.data.response,
         isBot: true
-      }])
+      }]);
     } catch (error) {
-      console.error('Failed to send message:', error)
+      console.error('Failed to send message:', error);
     }
-  }
+  };
 
   const handleSubmitFeedback = () => {
     console.log({ exhibitId, rating, feedback })
@@ -95,17 +94,59 @@ export default function TourPage({ exhibitId, userId }: TourPageProps) {
     setFeedback('')
   }
 
-  if (!exhibit) return null
+  if (isExhibitLoading || isDescriptionLoading) {
+    return (
+      <Box 
+        sx={{ 
+          height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%)'
+        }}
+      >
+        <Fade in={true}>
+          <Box sx={{ textAlign: 'center' }}>
+            <CircularProgress 
+              size={60}
+              thickness={4}
+              sx={{ 
+                color: '#C084FC',
+                mb: 3
+              }}
+            />
+            <Typography
+              variant="h5"
+              sx={{
+                color: 'white',
+                fontWeight: 500,
+                textShadow: '0 0 20px rgba(192, 132, 252, 0.5)'
+              }}
+            >
+              Preparing Your Exhibition Experience...
+            </Typography>
+          </Box>
+        </Fade>
+      </Box>
+    )
+  }
+
+  if (!exhibit || !exhibitDescription) return null
+
+  const enrichedExhibit = {
+    ...exhibit,
+    details: exhibitDescription.description
+  }
 
   return (
     <Box sx={{ py: 4 }}>
       <Container maxWidth="xl">
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mt: 4 }}>
           {/* Main Content */}
-          <Box sx={{ flex: '2 1 auto', minWidth: 0 }}>
+          <Box sx={{ flex: '2 1 auto', minWidth: 0, p: 2 }}>
             <ExhibitDetails 
-              exhibit={exhibit} 
-              complexityLevel={getComplexityLevel(complexity)} 
+              exhibit={enrichedExhibit}
             />
             <RecommendedExhibits exhibits={recommendedExhibits || []} />
           </Box>
@@ -128,6 +169,9 @@ export default function TourPage({ exhibitId, userId }: TourPageProps) {
                 newMessage={newMessage}
                 setNewMessage={setNewMessage}
                 handleSendMessage={handleSendMessage}
+                complexity={complexity}
+                interests={topicInterests}
+                language={localStorage.getItem('language') || 'en'}
               />
 
               <FeedbackSection

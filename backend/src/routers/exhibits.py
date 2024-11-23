@@ -4,7 +4,7 @@ from typing import List
 import database.crud as crud
 from database.schemas import Exhibit, ExhibitCreate
 from dependencies import get_db
-
+from ai.agents import ExhibitContentManager
 router = APIRouter(
     prefix="/exhibits",
     tags=["exhibits"]
@@ -33,3 +33,32 @@ def update_exhibit(exhibit_id: str, exhibit: ExhibitCreate, db: Session = Depend
 def delete_exhibit(exhibit_id: str, db: Session = Depends(get_db)):
     crud.delete_exhibit(db, exhibit_id)
     return {"status": "success"}
+
+@router.get("/{exhibit_id}/description")
+def get_exhibit_description(
+    exhibit_id: str,
+    complexity: int = 50,
+    interests: dict = None,
+    language: str = "english",
+    db: Session = Depends(get_db)
+):
+    exhibit = crud.get_exhibit(db, exhibit_id)
+    if exhibit is None:
+        raise HTTPException(status_code=404, detail="Exhibit not found")
+
+    content_manager = ExhibitContentManager()
+    enhanced_description = content_manager.process_exhibit(
+        description=exhibit.description,
+        interests=interests,
+        complexity=complexity,
+        language=language
+    )
+
+    if enhanced_description is None:
+        return {
+            "description": exhibit.description
+        }
+
+    return {
+        "description": enhanced_description
+    }

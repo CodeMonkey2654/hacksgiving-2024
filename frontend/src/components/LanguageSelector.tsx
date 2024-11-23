@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, FormControl, Select, MenuItem, SelectChangeEvent } from '@mui/material';
 import { Language } from '@mui/icons-material';
 import { translateText } from '../api/translator';
@@ -11,7 +11,7 @@ const LanguageSelector: React.FC = () => {
     setSelectedLanguage(targetLang);
     localStorage.setItem('language', targetLang);
 
-    // Translate the entire document body
+    // Translate the entire document body including the language selector
     const elements = Array.from(document.body.querySelectorAll('*'));
 
     for (const element of elements) {
@@ -23,6 +23,10 @@ const LanguageSelector: React.FC = () => {
     }
     
   };
+
+  useEffect(() => {
+    handleLanguageChange({ target: { value: selectedLanguage } } as SelectChangeEvent<string>);
+  }, [selectedLanguage]);
 
   return (
     <Box

@@ -16,6 +16,8 @@ from livekit.agents.multimodal import MultimodalAgent
 from livekit.plugins import openai
 
 
+
+
 load_dotenv(dotenv_path=".env.example")
 logger = logging.getLogger("my-worker")
 logger.setLevel(logging.INFO)
@@ -24,7 +26,7 @@ class DefaultAssistant(llm.FunctionContext):
     @llm.ai_callable()
     async def search(
         self,
-        text: Annotated[str, llm.TypeInfo(description="The text to search for")],
+        exhibit_id: Annotated[str, llm.TypeInfo(description="The id of the exhibit to search for")],
     ):
         """Transcribe conversation text to console"""
         return "Continue conversation with the user"

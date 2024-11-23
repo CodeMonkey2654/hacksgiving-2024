@@ -6,12 +6,13 @@ from llama_index.core.tools import FunctionTool
 import json
 from functools import partial
 import os
+from dotenv import load_dotenv
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyC20Z_YtpL9VsJsLsLI2POBn_HZf9v5uOA"
+load_dotenv()
 
 class ConversationAgent:
     def __init__(self):
-        self.llm = OpenAI(model="gpt-4-turbo-preview", temperature=0.7)
+        self.llm = OpenAI(model="gpt-4o-mini", temperature=0.7)
         self.agent = self._create_agent()
 
     def _create_agent(self) -> ReActAgent:
@@ -58,7 +59,7 @@ Generate a conversational response that naturally incorporates the relevant info
 
 class ExhibitEnhancementAgent:
     def __init__(self):
-        self.llm = OpenAI(model="gpt-4-turbo-preview", temperature=0.7)
+        self.llm = OpenAI(model="gpt-4o-mini", temperature=0.7)
         self.agent = self._create_agent()
 
     def _create_agent(self) -> ReActAgent:
@@ -77,7 +78,10 @@ class ExhibitEnhancementAgent:
         prompt = self._build_enhancement_prompt(description, interests, complexity)
         try:
             response = self.llm.complete(prompt)
-            return response.text.strip()
+            enhanced = response.text.strip()
+            if not enhanced or len(enhanced) < len(description)/2:
+                raise ValueError("Enhancement produced invalid or too short response")
+            return enhanced
         except Exception as e:
             print(f"Enhancement failed: {str(e)}")
             return description
@@ -101,7 +105,7 @@ Provide an enhanced description that maintains factual accuracy while being more
 
 class FactCheckingAgent:
     def __init__(self):
-        self.llm = OpenAI(model="gpt-4-turbo-preview", temperature=0.1)
+        self.llm = OpenAI(model="gpt-4o-mini", temperature=0.1)
         self.agent = self._create_agent()
 
     def _create_agent(self) -> ReActAgent:
@@ -119,8 +123,15 @@ class FactCheckingAgent:
         """Verifies that the enhanced description maintains factual accuracy"""
         prompt = self._build_verification_prompt(original, enhanced)
         try:
-            response = json.loads(self.llm.complete(prompt).text)
-            return response["is_accurate"], response["explanation"]
+            response = self.llm.complete(prompt)
+            # Parse response as JSON, with error handling
+            try:
+                result = json.loads(response.text)
+                return result["is_accurate"], result["explanation"]
+            except json.JSONDecodeError:
+                # If JSON parsing fails, try to extract boolean from text
+                is_accurate = "true" in response.text.lower()
+                return is_accurate, response.text
         except Exception as e:
             print(f"Verification failed: {str(e)}")
             return False, str(e)
@@ -141,10 +152,8 @@ Follow these steps:
 3. Flag any inconsistencies or unsupported additions
 4. Determine if the enhanced version maintains factual integrity
 
-Return a JSON object with:
-- "is_accurate": boolean indicating if enhanced version is factually consistent
-- "explanation": detailed explanation of your analysis
-"""
+Respond with a JSON object in this exact format:
+{{"is_accurate": true/false, "explanation": "your detailed explanation"}}"""
 
 class TranslationAgent:
     def __init__(self):
@@ -164,7 +173,7 @@ class TranslationAgent:
 
     def translate(self, text: str, target_language: str) -> str:
         """Translates text to target language using Gemini"""
-        if target_language.lower() == "english":
+        if target_language.lower() in ["english", "en"]:
             return text
 
         prompt = self._build_translation_prompt(text, target_language)
@@ -202,30 +211,31 @@ class ExhibitContentManager:
         language: str
     ) -> Optional[str]:
         """Process exhibit description through enhancement, fact-checking, and translation"""
+        print(f"Processing exhibit description with interests: {interests}, complexity: {complexity}, language: {language}")
         try:
-            # Enhance description using agent
-            enhanced = self.enhancer.agent.run(
-                f"Enhance this description: {description}",
-                function_args={"description": description, "interests": interests, "complexity": complexity}
-            )
+            max_attempts = 3
+            attempt = 0
+            
+            while attempt < max_attempts:
+                # Enhance description using agent
+                enhanced = self.enhancer.enhance_description(description, interests, complexity)
 
-            # Verify accuracy using agent
-            is_accurate, explanation = self.fact_checker.agent.run(
-                f"Verify accuracy between original and enhanced descriptions",
-                function_args={"original": description, "enhanced": enhanced}
-            )
+                # Verify accuracy using agent
+                is_accurate, explanation = self.fact_checker.verify_accuracy(description, enhanced)
 
-            if not is_accurate:
-                print(f"Fact check failed: {explanation}")
-                return None
+                if is_accurate:
+                    # Only translate if language isn't English
+                    if language.lower() not in ["english", "en"]:
+                        final = self.translator.translate(enhanced, language)
+                    else:
+                        final = enhanced
+                    return final
 
-            # Translate if needed using agent
-            final = self.translator.agent.run(
-                f"Translate text to {language}",
-                function_args={"text": enhanced, "target_language": language}
-            )
+                print(f"Fact check failed (attempt {attempt + 1}): {explanation}")
+                attempt += 1
 
-            return final
+            # If we've exhausted attempts, return original description
+            return description
 
         except Exception as e:
             print(f"Exhibit processing failed: {str(e)}")

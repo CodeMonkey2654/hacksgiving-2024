@@ -35,7 +35,8 @@
     "react-spinners": "^0.14.1",
     "react-tsparticles": "^2.12.2",
     "tailwind-merge": "^2.5.4",
-    "tsparticles": "^3.6.0"
+    "tsparticles": "^3.6.0",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

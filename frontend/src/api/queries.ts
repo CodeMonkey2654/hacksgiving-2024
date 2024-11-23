@@ -56,6 +56,23 @@ export const useExhibit = (id: string) => {
   });
 };
 
+export const useExhibitDescription = (id: string) => {
+  const userInterests = localStorage.getItem('topicInterests') || '{}';
+  const userComplexity = localStorage.getItem('complexity') || '50';
+  const userLanguage = localStorage.getItem('language') || 'en';
+  return useQuery({
+    queryKey: ['exhibits', id, 'description'],
+    queryFn: () => apiClient.get(`/exhibits/${id}/description`, {
+      params: {
+        complexity: userComplexity,
+        interests: userInterests,
+        language: userLanguage
+      }
+    }).then(res => res.data),
+    enabled: !!id
+  });
+};
+
 export const useCreateExhibit = () => {
   const queryClient = useQueryClient();
   return useMutation({
@@ -113,17 +130,6 @@ export const useCreateUser = () => {
   });
 };
 
-// Visits
-export const useRecordVisit = () => {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: (visit: VisitCreate) => apiClient.post('/visits', visit),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['visits'] });
-    }
-  });
-};
-
 export const useUserVisits = (userId: string) => {
   return useQuery({
     queryKey: ['visits', 'user', userId],
@@ -153,6 +159,45 @@ export const useRecommendations = (userId: string, k: number = 3) => {
 export const useSendMessage = () => {
   return useMutation({
     mutationFn: (message: { session_id: string, user_input: string, language: string }) => 
-      apiClient.post('/chat/message', message)
+      apiClient.post('/chat', message)
+  });
+};
+
+export const useChatWithExhibit = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ message, sessionId, interests, complexity, language }: {
+      message: string;
+      sessionId: string;
+      interests: Record<string, number>;
+      complexity: number;
+      language: string;
+    }) => 
+      apiClient.post('chat', {
+        message: String(message),
+        session_id: String(sessionId),
+        interests: interests,
+        complexity: Number(complexity),
+        language: String(language)
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['chat'] });
+    }
+  });
+};
+
+// Page Visits
+export const useRecordVisit = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (visit: {
+      user_id: string;
+      session_id: string;
+      page_path: string;
+      timestamp: string;
+    }) => apiClient.post('/visits', visit),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['visits'] });
+    }
   });
 };

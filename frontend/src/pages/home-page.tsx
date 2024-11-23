@@ -2,25 +2,13 @@ import { Box, Container, Typography, Button, Paper, Stack } from '@mui/material'
 import { Settings, Explore } from '@mui/icons-material'
 import { useState, useEffect } from 'react'
 import { useMediaQuery, useTheme } from '@mui/material'
-import LanguageSelector from '../components/LanguageSelector'
 import FeatureCard from '../components/FeatureCard'
 
 
 export default function HomePage() {
   const [isHovered, setIsHovered] = useState<number | null>(null);
-  const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'en');
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-  const handleLanguageChange = (e: { target: { value: string } }) => {
-    const newLanguage = e.target.value;
-    setLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage);
-  };
-
-  useEffect(() => {
-    localStorage.setItem('language', language)
-  }, [language]);
 
   const features = [
     {

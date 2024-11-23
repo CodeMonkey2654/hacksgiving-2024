@@ -17,6 +17,7 @@ const RecommendedExhibits: React.FC<RecommendedExhibitsProps> = ({ exhibits }) =
   <Paper
     sx={{
       p: 3,
+      mt: 2,
       background: 'rgba(255, 255, 255, 0.05)',
       backdropFilter: 'blur(10px)',
       borderRadius: 4,
