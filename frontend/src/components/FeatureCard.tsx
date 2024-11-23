@@ -32,7 +32,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       background: isHovered ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.05)',
       transition: 'all 0.3s ease',
       transform: isHovered ? 'translateY(-4px)' : 'none',
-      cursor: 'pointer'
     }}
   >
     <Stack

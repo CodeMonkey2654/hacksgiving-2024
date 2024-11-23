@@ -2,8 +2,7 @@ import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createRouter } from '@tanstack/react-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import MagicalParticles from './components/MagicalParticles';
-import MouseParticles from './components/MouseParticles';
+import { ThemeProvider } from './contexts/ThemeContext';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -12,7 +11,15 @@ import './styles/global.css';
 
 import { routeTree } from './routeTree.gen';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: 1000 * 60 * 5, // 5 minutes
+      retry: 1
+    },
+  },
+});
 const router = createRouter({ routeTree });
 
 declare module '@tanstack/react-router' {
@@ -27,9 +34,9 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <QueryClientProvider client={queryClient}>
-        <MagicalParticles />
-        <MouseParticles />
-        <RouterProvider router={router} />
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
       </QueryClientProvider>
     </StrictMode>
   );

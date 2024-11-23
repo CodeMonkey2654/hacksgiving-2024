@@ -49,7 +49,7 @@ export default function ConfigurePage() {
     <Box
       sx={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #0f1642 0%, #2a1650 50%, #3a1357 100%)',
+        background: 'var(--background-gradient)',
         padding: 4,
       }}
     >
@@ -58,10 +58,10 @@ export default function ConfigurePage() {
           elevation={24}
           sx={{
             padding: 6,
-            background: 'rgba(255, 255, 255, 0.05)',
+            background: 'var(--paper-bg)',
             backdropFilter: 'blur(10px)',
             borderRadius: 4,
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            border: '1px solid var(--paper-border)',
             boxShadow: '0 0 40px rgba(138, 43, 226, 0.2)',
           }}
         >
@@ -70,7 +70,7 @@ export default function ConfigurePage() {
           <ComplexitySlider complexity={complexity} setComplexity={setComplexity} />
 
           <Box>
-            <Typography variant="h6" sx={{ color: 'white', mb: 3 }}>
+            <Typography variant="h6" sx={{ color: 'var(--text-color)', mb: 3 }}>
               Topics of Interest
             </Typography>
             <Stack spacing={3}>

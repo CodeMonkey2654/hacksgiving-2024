@@ -24,20 +24,20 @@ export default function HomePage() {
 
   const features = [
     {
-      icon: <Settings sx={{ color: '#60A5FA' }} />,
+      icon: <Settings sx={{ color: 'var(--secondary)' }} />,
       title: 'Personalized Experience',
       description: 'Your journey will be tailored to your interests and preferences',
-      bgColor: 'rgba(96, 165, 250, 0.2)',
-      hoverBgColor: 'rgba(96, 165, 250, 0.3)',
-      iconColor: '#60A5FA'
+      bgColor: 'var(--card-bg)',
+      hoverBgColor: 'var(--hover-bg)',
+      iconColor: 'var(--secondary)'
     },
     {
-      icon: <Explore sx={{ color: '#C084FC' }} />,
+      icon: <Explore sx={{ color: 'var(--secondary)' }} />,
       title: 'Guided Discovery',
       description: 'Interactive tours help you explore and learn at your own pace',
-      bgColor: 'rgba(192, 132, 252, 0.2)',
-      hoverBgColor: 'rgba(192, 132, 252, 0.3)',
-      iconColor: '#C084FC'
+      bgColor: 'var(--card-bg)',
+      hoverBgColor: 'var(--hover-bg)',
+      iconColor: 'var(--secondary)'
     }
   ];
 
@@ -46,7 +46,7 @@ export default function HomePage() {
       sx={{
         position: 'relative',
         height: '75vh',
-        background: 'linear-gradient(135deg, #0f1642 0%, #2a1650 50%, #3a1357 100%)',
+        background: 'var(--background-gradient)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -56,15 +56,15 @@ export default function HomePage() {
     >
       <LanguageSelector language={language} handleLanguageChange={handleLanguageChange} />
 
-      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
+      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1, mt: 22.5}}>
         <Paper
           elevation={24}
           sx={{
             padding: { xs: 3, sm: 4, md: 6 },
-            background: 'rgba(255, 255, 255, 0.05)',
+            background: 'var(--paper-bg)',
             backdropFilter: 'blur(10px)',
             borderRadius: 4,
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            border: '1px solid var(--paper-border)',
             boxShadow: '0 0 40px rgba(138, 43, 226, 0.2)',
             overflow: 'hidden',
           }}
@@ -78,6 +78,7 @@ export default function HomePage() {
               backgroundClip: 'text',
               color: 'transparent',
               mb: 3,
+              mt: 3,
               fontSize: { xs: '2rem', sm: '3rem', md: '3.75rem' },
             }}
           >
@@ -88,7 +89,8 @@ export default function HomePage() {
             variant={isMobile ? 'body1' : 'h6'}
             sx={{
               textAlign: 'center',
-              color: 'rgba(255, 255, 255, 0.8)',
+              color: 'var(--text-color)',
+              opacity: 0.8,
               mb: { xs: 4, sm: 5, md: 6 },
               px: 2,
             }}
@@ -96,7 +98,7 @@ export default function HomePage() {
             Embark on a personalized journey through knowledge and wonder
           </Typography>
 
-          <Stack spacing={3}>
+          <Stack spacing={3} >
             {features.map((item, index) => (
               <FeatureCard
                 key={index}
