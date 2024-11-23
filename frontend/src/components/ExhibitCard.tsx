@@ -1,11 +1,20 @@
 import { Paper, Typography, Stack } from '@mui/material';
 
+interface ExhibitDetails {
+  text: string;
+  intended_age: string;
+  difficulty: string;
+  gs_assistance: string;
+  popularity: string;
+  visitor_duration: string;
+}
+
 interface Exhibit {
-  id: number;
+  id: string;
   title: string;
   description: string;
   image: string;
-  category: string;
+  details: ExhibitDetails;
 }
 
 interface ExhibitCardProps {
@@ -61,7 +70,7 @@ const ExhibitCard: React.FC<ExhibitCardProps> = ({ exhibit, onClick }) => (
           fontWeight: 500,
         }}
       >
-        {exhibit.category}
+        {exhibit.details.text}
       </Typography>
     </Stack>
   </Paper>

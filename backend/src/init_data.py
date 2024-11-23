@@ -1,9 +1,9 @@
+import json
 from database.database import SessionLocal, engine
 from database.base import Base
-from database.crud import create_topic, create_exhibit
-from database.schemas import TopicCreate, ExhibitCreate
-from database.models import Topic
-
+from database.crud import create_topic, create_exhibit, create_exhibit_topic
+from database.schemas import TopicCreate, ExhibitCreate, ExhibitTopicCreate
+from database.models import Topic, Exhibit, ExhibitTopic
 def init_db():
     Base.metadata.create_all(bind=engine)
     
@@ -14,55 +14,52 @@ def init_db():
         db.close()
         return
     
-    # Create initial topics
-    topics = [
-        TopicCreate(
-            label="Physics",
-            icon="⚛️",
-            color="#60A5FA"
-        ),
-        TopicCreate(
-            label="Chemistry", 
-            icon="🧪",
-            color="#C084FC"
-        ),
-        TopicCreate(
-            label="Biology",
-            icon="🧬", 
-            color="#F472B6"
-        ),
-        TopicCreate(
-            label="Astronomy",
-            icon="🔭",
-            color="#818CF8"
-        )
-    ]
+    # Load JSON data
+    with open('local-scripts/data_gen/topics.json') as f:
+        topics_data = json.load(f)
     
+    with open('local-scripts/data_gen/exhibits.json') as f:
+        exhibits_data = json.load(f)
+        
+    with open('local-scripts/data_gen/exhibit_topics.json') as f:
+        exhibit_topics_data = json.load(f)
+    
+    # Create topics
     topic_ids = {}
-    for topic in topics:
-        db_topic = create_topic(db, topic)
-        topic_ids[topic.label] = db_topic.id
-    
-    # Create initial exhibits
-    exhibits = [
-        ExhibitCreate(
-            title="Quantum Mysteries",
-            description="Explore the fascinating world of quantum mechanics",
-            image="⚛️",
-            topic_id=topic_ids["Physics"],
-            details="Quantum mechanics is a fundamental theory in physics that describes nature at the atomic and subatomic scales. Through interactive demonstrations, visitors can learn about wave-particle duality, quantum superposition, and the strange behavior of particles at the quantum level."
-        ),
-        ExhibitCreate(
-            title="Chemical Reactions",
-            description="Witness spectacular chemical transformations",
-            image="🧪",
-            topic_id=topic_ids["Chemistry"],
-            details="Experience the excitement of chemical reactions firsthand. Watch as substances combine to create new compounds, releasing energy in the form of light, heat, or gas. Learn about reaction types, catalysts, and the principles of chemical bonding."
+    for topic in topics_data:
+        topic_create = TopicCreate(
+            id=topic['id'],
+            label=topic['label'],
+            icon=topic['icon'],
+            color=topic['color']
         )
-    ]
+        db_topic = create_topic(db, topic_create)
+        topic_ids[topic['id']] = db_topic.id
     
-    for exhibit in exhibits:
-        create_exhibit(db, exhibit)
+    # Create exhibits with proper JSON handling
+    for exhibit in exhibits_data:
+        try:
+            details = json.loads(exhibit['details'])
+        except (json.JSONDecodeError, TypeError, KeyError):
+            details = {}
+            
+        exhibit_create = ExhibitCreate(
+            id=exhibit['id'],
+            title=exhibit['title'],
+            description=exhibit['description'],
+            image=exhibit['image'],
+            details=details
+        )
+        create_exhibit(db, exhibit_create)
+    
+    # Create exhibit-topic relationships
+    for exhibit_topic in exhibit_topics_data:
+        exhibit_topic_create = ExhibitTopicCreate(
+            exhibit_id=exhibit_topic['exhibit_id'],
+            topic_id=exhibit_topic['topic_id'],
+            relevance=exhibit_topic['relevance']
+        )
+        create_exhibit_topic(db, exhibit_topic_create)
     
     db.close()
 

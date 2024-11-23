@@ -1,9 +1,5 @@
-from fastapi import APIRouter, Depends, HTTPException, Body
-from sqlalchemy.orm import Session
-import database.crud as crud
+from fastapi import APIRouter, HTTPException
 from ai.chat import ChatKnowledgeBase, ChatManager
-import json
-from dependencies import get_db
 from pydantic import BaseModel, Field
 from typing import Dict, Any
 

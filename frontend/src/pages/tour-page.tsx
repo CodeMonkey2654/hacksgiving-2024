@@ -13,6 +13,7 @@ import TopicInterests from '../components/TopicInterests'
 import ChatWindow from '../components/ChatWindow'
 import RecommendedExhibits from '../components/RecommendedExhibits'
 import FeedbackSection from '../components/FeedbackSection'
+import VoiceAssistant from '../components/VoiceAssistant'
 import { useExhibit, useRecommendations, useChatWithExhibit, useExhibitDescription, useRecordVisit } from '../api/queries'
 
 interface TourPageProps {
@@ -173,6 +174,8 @@ export default function TourPage({ exhibitId, userId }: TourPageProps) {
                 interests={topicInterests}
                 language={localStorage.getItem('language') || 'en'}
               />
+
+              <VoiceAssistant />
 
               <FeedbackSection
                 rating={rating}

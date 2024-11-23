@@ -1,5 +1,6 @@
-import { Paper, Typography } from '@mui/material';
+import { Paper } from '@mui/material';
 import GradientTypography from './GradientTypography';
+import ReactMarkdown from 'react-markdown';
 
 interface Exhibit {
   id: number;
@@ -19,37 +20,99 @@ const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => (
     elevation={24}
     sx={{
       p: 6,
-      background: 'rgba(255, 255, 255, 0.05)',
+      background: 'var(--paper-bg)',
       backdropFilter: 'blur(10px)',
       borderRadius: 4,
-      border: '1px solid rgba(255, 255, 255, 0.1)',
+      border: '1px solid var(--paper-border)',
       boxShadow: '0 0 40px rgba(138, 43, 226, 0.2)',
+      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     }}
   >
-    <Typography sx={{ fontSize: '64px', textAlign: 'center', mb: 2 }}>
+    <div style={{ fontSize: '64px', textAlign: 'center', marginBottom: '16px' }}>
       {exhibit.image}
-    </Typography>
+    </div>
     <GradientTypography>{exhibit.title}</GradientTypography>
-    <Typography
-      sx={{
+    <div
+      style={{
         color: '#C084FC',
         textAlign: 'center',
         fontWeight: 500,
-        mb: 4,
+        marginBottom: '32px',
+        letterSpacing: '0.02em',
       }}
     >
       {exhibit.category}
-    </Typography>
-    <Typography
-      sx={{
-        color: 'rgba(255, 255, 255, 0.8)',
+    </div>
+    <div
+      style={{
         textAlign: 'center',
-        fontSize: '1.2rem',
-        mb: 6,
+        fontSize: '1.1rem',
+        lineHeight: 1.6,
+        marginBottom: '48px',
+        color: 'var(--text-color)',
       }}
     >
-      {exhibit.details}
-    </Typography>
+      <ReactMarkdown
+        components={{
+          p: ({ children }) => (
+            <p style={{ 
+              margin: '1em 0', 
+              color: 'var(--text-color)',
+              lineHeight: 1.6,
+              letterSpacing: '0.01em'
+            }}>{children}</p>
+          ),
+          h1: ({ children }) => (
+            <h1 style={{ 
+              margin: '0.8em 0', 
+              color: 'var(--text-color)',
+              fontWeight: 600,
+              letterSpacing: '-0.02em'
+            }}>{children}</h1>
+          ),
+          h2: ({ children }) => (
+            <h2 style={{ 
+              margin: '0.7em 0', 
+              color: 'var(--text-color)',
+              fontWeight: 600,
+              letterSpacing: '-0.01em'
+            }}>{children}</h2>
+          ),
+          h3: ({ children }) => (
+            <h3 style={{ 
+              margin: '0.6em 0', 
+              color: 'var(--text-color)',
+              fontWeight: 600
+            }}>{children}</h3>
+          ),
+          ul: ({ children }) => (
+            <ul style={{ 
+              textAlign: 'left', 
+              marginLeft: '2em', 
+              color: 'var(--text-color)',
+              lineHeight: 1.6
+            }}>{children}</ul>
+          ),
+          ol: ({ children }) => (
+            <ol style={{ 
+              textAlign: 'left', 
+              marginLeft: '2em', 
+              color: 'var(--text-color)',
+              lineHeight: 1.6
+            }}>{children}</ol>
+          ),
+          li: ({ children }) => (
+            <li style={{ 
+              margin: '0.5em 0', 
+              color: 'var(--text-color)',
+              lineHeight: 1.6
+            }}>{children}</li>
+          ),
+        }}
+      >
+        {exhibit.details}
+      </ReactMarkdown>
+    </div>
   </Paper>
 );
 

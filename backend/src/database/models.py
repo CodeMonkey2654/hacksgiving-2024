@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer, DateTime, ForeignKey, JSON
+from sqlalchemy import Column, String, Integer, DateTime, ForeignKey, JSON, Float
 from sqlalchemy.sql import func
 from .base import Base
 
@@ -17,8 +17,14 @@ class Exhibit(Base):
     title = Column(String, nullable=False)
     description = Column(String, nullable=False)
     image = Column(String, nullable=False)
-    topic_id = Column(String, ForeignKey("topics.id"), nullable=False)
     details = Column(JSON, nullable=True)
+
+class ExhibitTopic(Base):
+    __tablename__ = "exhibit_topics"
+
+    exhibit_id = Column(String, ForeignKey("exhibits.id"), primary_key=True)
+    topic_id = Column(String, ForeignKey("topics.id"), primary_key=True)
+    relevance = Column(Float, nullable=False)
 
 class User(Base):
     __tablename__ = "users"

@@ -18,7 +18,7 @@ from livekit.plugins import openai
 
 
 
-load_dotenv(dotenv_path=".env.example")
+load_dotenv(dotenv_path=".env")
 logger = logging.getLogger("my-worker")
 logger.setLevel(logging.INFO)
 

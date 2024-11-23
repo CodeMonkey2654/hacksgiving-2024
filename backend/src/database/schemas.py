@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Dict, List, Optional
+from typing import Dict, Any, Optional
 from datetime import datetime
 
 class TopicBase(BaseModel):
@@ -8,7 +8,7 @@ class TopicBase(BaseModel):
     color: str
 
 class TopicCreate(TopicBase):
-    pass
+    id: str
 
 class Topic(TopicBase):
     id: str
@@ -17,23 +17,34 @@ class Topic(TopicBase):
         from_attributes = True
 
 class ExhibitBase(BaseModel):
+    id: str
     title: str
     description: str
     image: str
-    topic_id: str
-    details: str  # Changed from Dict to str
+    details: Dict[str, Any]
 
 class ExhibitCreate(ExhibitBase):
     pass
 
 class Exhibit(ExhibitBase):
-    id: str
+    class Config:
+        orm_mode = True
+
+class ExhibitTopicBase(BaseModel):
+    exhibit_id: str
+    topic_id: str
+    relevance: float
+
+class ExhibitTopicCreate(ExhibitTopicBase):
+    pass
+
+class ExhibitTopic(ExhibitTopicBase):
     
     class Config:
         from_attributes = True
 
 class UserBase(BaseModel):
-    interests: str
+    interests: Dict[str, float]
     language: str
     reading_level: str
 
