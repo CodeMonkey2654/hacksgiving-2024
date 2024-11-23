@@ -12,17 +12,17 @@ const ComplexitySlider: React.FC<ComplexitySliderProps> = ({ complexity, setComp
   };
 
   const marks = [
-    { value: 0, label: 'Elementary' },
-    { value: 25, label: 'Middle' },
-    { value: 50, label: 'High' },
+    { value: 0, label: 'Elem. School' },
+    { value: 25, label: 'Middle School' },
+    { value: 50, label: 'High School' },
     { value: 75, label: 'College' },
     { value: 100, label: 'Graduate' },
   ];
 
   return (
     <Box sx={{ mb: 6 }}>
-      <Typography variant="h6" sx={{ color: 'white', mb: 2 }}>
-        Tour Complexity
+      <Typography variant="h6" sx={{ color: 'var(--text-color)', mb: 2 }}>
+        Education Level
       </Typography>
       <Stack spacing={2} direction="row" alignItems="center">
         <Slider
@@ -33,18 +33,22 @@ const ComplexitySlider: React.FC<ComplexitySliderProps> = ({ complexity, setComp
           step={25}
           marks={marks}
           sx={{
-            color: '#C084FC',
+            color: 'var(--primary)',
             '& .MuiSlider-thumb': {
-              width: 21, 
-              height: 20, 
-              backgroundColor: 'var(--text-color)',
-              border: '2px solid #C084FC',
+              width: 24,
+              height: 24,
+              backgroundColor: 'var(--secondary)',
+              border: '2px solid var(--primary-light)',
+            },
+            '& .MuiSlider-markLabel': {
+              color: 'var(--text-secondary)', 
+              fontSize: '0.91rem', 
             },
             '& .MuiSlider-mark': {
-              width: 12, 
-              height: 12, 
-              borderRadius: '50%', 
-              backgroundColor: '#C084FC',
+              backgroundColor: 'var(--text-color)',
+              width: 11,
+              height: 11,
+              borderRadius: '50%',
             },
           }}
         />
