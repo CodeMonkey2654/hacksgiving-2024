@@ -7,15 +7,14 @@ interface Exhibit {
   description: string;
   image: string;
   category: string;
-  details: Record<number, string>;
+  details: string;
 }
 
 interface ExhibitDetailsProps {
   exhibit: Exhibit;
-  complexityLevel: number;
 }
 
-const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit, complexityLevel }) => (
+const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => (
   <Paper
     elevation={24}
     sx={{
@@ -49,7 +48,7 @@ const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit, complexityLeve
         mb: 6,
       }}
     >
-      {exhibit.details[complexityLevel]}
+      {exhibit.details}
     </Typography>
   </Paper>
 );

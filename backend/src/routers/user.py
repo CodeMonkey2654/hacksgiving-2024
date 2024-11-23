@@ -6,7 +6,7 @@ from database.schemas import User, UserCreate
 from dependencies import get_db
 
 router = APIRouter(
-    prefix="/api/users",
+    prefix="/users",
     tags=["users"]
 )
 

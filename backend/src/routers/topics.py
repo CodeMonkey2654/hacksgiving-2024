@@ -6,7 +6,7 @@ from database.schemas import Topic, TopicCreate
 from dependencies import get_db
 
 router = APIRouter(
-    prefix="/api/topics",
+    prefix="/topics",
     tags=["topics"]
 )
 

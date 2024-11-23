@@ -27,17 +27,17 @@ export default function HomePage() {
       icon: <Settings sx={{ color: 'var(--secondary)' }} />,
       title: 'Personalized Experience',
       description: 'Your journey will be tailored to your interests and preferences',
-      bgColor: 'var(--card-bg)',
-      hoverBgColor: 'var(--hover-bg)',
-      iconColor: 'var(--secondary)'
+      bgColor: 'var(--paper-bg)',
+      hoverBgColor: 'var(--paper-bg)',
+      iconColor: 'var(--paper-bg)'
     },
     {
       icon: <Explore sx={{ color: 'var(--secondary)' }} />,
       title: 'Guided Discovery',
       description: 'Interactive tours help you explore and learn at your own pace',
-      bgColor: 'var(--card-bg)',
-      hoverBgColor: 'var(--hover-bg)',
-      iconColor: 'var(--secondary)'
+      bgColor: 'var(--paper-bg)',
+      hoverBgColor: 'var(--paper-bg)',
+      iconColor: 'var(--paper-bg)'
     }
   ];
 
@@ -122,6 +122,7 @@ export default function HomePage() {
               width: { xs: '100%', sm: 'auto' },
               background: 'linear-gradient(45deg, #60A5FA, #C084FC)',
               boxShadow: '0 0 20px rgba(192, 132, 252, 0.3)',
+              textAlign: 'center',
               '&:hover': {
                 background: 'linear-gradient(45deg, #3B82F6, #A855F7)',
                 transform: 'translateY(-2px)',

@@ -8,6 +8,7 @@ const StartJourneyButton: React.FC = () => (
       mt: 6,
       display: 'block',
       mx: 'auto',
+      textAlign: 'center',
       background: 'linear-gradient(45deg, #60A5FA, #C084FC)',
       boxShadow: '0 0 20px rgba(192, 132, 252, 0.3)',
       '&:hover': {

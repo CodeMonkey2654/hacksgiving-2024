@@ -1,20 +1,20 @@
 from sqlalchemy.orm import Session
-from database.models import Topic, Exhibit, User, Visit
-import database.schemas as schemas
+from .models import Topic, Exhibit, User, Visit
+from .schemas import TopicCreate, ExhibitCreate, UserCreate, VisitCreate
 from fastapi import HTTPException
 import uuid
 
 def get_topics(db: Session):
     return db.query(Topic).all()
 
-def create_topic(db: Session, topic: schemas.TopicCreate):
+def create_topic(db: Session, topic: TopicCreate):
     db_topic = Topic(id=str(uuid.uuid4()), **topic.dict())
     db.add(db_topic)
     db.commit()
     db.refresh(db_topic)
     return db_topic
 
-def update_topic(db: Session, topic_id: str, topic: schemas.TopicCreate):
+def update_topic(db: Session, topic_id: str, topic: TopicCreate):
     db_topic = db.query(Topic).filter(Topic.id == topic_id).first()
     if not db_topic:
         raise HTTPException(status_code=404, detail="Topic not found")
@@ -37,14 +37,21 @@ def delete_topic(db: Session, topic_id: str):
 def get_exhibits(db: Session):
     return db.query(Exhibit).all()
 
-def create_exhibit(db: Session, exhibit: schemas.ExhibitCreate):
-    db_exhibit = Exhibit(id=str(uuid.uuid4()), **exhibit.dict())
+def create_exhibit(db: Session, exhibit: ExhibitCreate):
+    db_exhibit = Exhibit(
+        id=str(uuid.uuid4()),
+        title=exhibit.title,
+        description=exhibit.description,
+        image=exhibit.image,
+        topic_id=exhibit.topic_id,
+        details=exhibit.details
+    )
     db.add(db_exhibit)
     db.commit()
     db.refresh(db_exhibit)
     return db_exhibit
 
-def update_exhibit(db: Session, exhibit_id: str, exhibit: schemas.ExhibitCreate):
+def update_exhibit(db: Session, exhibit_id: str, exhibit: ExhibitCreate):
     db_exhibit = db.query(Exhibit).filter(Exhibit.id == exhibit_id).first()
     if not db_exhibit:
         raise HTTPException(status_code=404, detail="Exhibit not found")
@@ -70,14 +77,14 @@ def get_users(db: Session):
 def get_user(db: Session, user_id: str):
     return db.query(User).filter(User.id == user_id).first()
 
-def create_user(db: Session, user: schemas.UserCreate):
+def create_user(db: Session, user: UserCreate):
     db_user = User(**user.dict())
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
     return db_user
 
-def update_user(db: Session, user_id: str, user: schemas.UserBase):
+def update_user(db: Session, user_id: str, user: UserCreate):
     db_user = db.query(User).filter(User.id == user_id).first()
     if not db_user:
         raise HTTPException(status_code=404, detail="User not found")
@@ -100,7 +107,7 @@ def delete_user(db: Session, user_id: str):
 def get_visits(db: Session):
     return db.query(Visit).all()
 
-def create_visit(db: Session, visit: schemas.VisitCreate):
+def create_visit(db: Session, visit: VisitCreate):
     db_visit = Visit(**visit.dict())
     db.add(db_visit)
     db.commit()

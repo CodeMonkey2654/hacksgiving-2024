@@ -4,42 +4,18 @@ import GradientTypography from '../components/GradientTypography'
 import ExhibitCard from '../components/ExhibitCard'
 import FeedbackForm from '../components/FeedbackForm'
 import { Link } from '@tanstack/react-router'
+import { useExhibits } from '../api/queries';
+import LoadingSpinner from '../components/LoadingSpinner';
+import ErrorMessage from '../components/ErrorMessage';
 
 export default function ExhibitsPage() {
+  const { data: exhibits = [], isLoading, error } = useExhibits();
   const [selectedExhibit, setSelectedExhibit] = useState<number | null>(null);
   const [rating, setRating] = useState<number | null>(null);
   const [feedback, setFeedback] = useState('');
 
-  const exhibits = [
-    {
-      id: 1,
-      title: 'Quantum Mysteries',
-      description: 'Explore the fascinating world of quantum mechanics through interactive demonstrations',
-      image: '⚛️',
-      category: 'Physics'
-    },
-    {
-      id: 2, 
-      title: 'Chemical Reactions Lab',
-      description: 'Witness spectacular chemical transformations and understand the principles behind them',
-      image: '🧪',
-      category: 'Chemistry'
-    },
-    {
-      id: 3,
-      title: 'DNA & Life',
-      description: 'Discover the building blocks of life and how genetics shapes our world',
-      image: '🧬',
-      category: 'Biology'
-    },
-    {
-      id: 4,
-      title: 'Cosmic Journey',
-      description: 'Travel through space and time to explore the wonders of our universe',
-      image: '🔭',
-      category: 'Astronomy'
-    }
-  ];
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <ErrorMessage error={error} />;
 
   const handleSubmitFeedback = () => {
     console.log({ exhibitId: selectedExhibit, rating, feedback });

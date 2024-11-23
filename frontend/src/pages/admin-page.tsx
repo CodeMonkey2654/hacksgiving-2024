@@ -14,8 +14,12 @@ import {
   ListItem,
   ListItemText,
   ListItemSecondaryAction,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
 } from '@mui/material'
-import { Delete, Edit, Save, Cancel } from '@mui/icons-material'
+import { Delete, Edit } from '@mui/icons-material'
 import { useTopics, useCreateTopic, useExhibits, useCreateExhibit, useUpdateTopic, useUpdateExhibit, useDeleteTopic, useDeleteExhibit } from '../api/queries'
 
 interface Topic {
@@ -30,14 +34,22 @@ interface Exhibit {
   title: string
   description: string
   image: string
-  category: string
-  details: {
-    elementary: string
-    'middle-school': string
-    'high-school': string
-    college: string
-    expert: string
-  }
+  topic_id: string
+  details: string
+}
+
+interface TopicCreate {
+  label: string
+  icon: string
+  color: string
+}
+
+interface ExhibitCreate {
+  title: string
+  description: string
+  image: string
+  topic_id: string
+  details: string
 }
 
 export default function AdminPage() {
@@ -53,50 +65,41 @@ export default function AdminPage() {
     const updateExhibit = useUpdateExhibit()
     const deleteExhibit = useDeleteExhibit()
     
-    const [newTopic, setNewTopic] = useState<Topic>({
-      id: '',
+    const [newTopic, setNewTopic] = useState<TopicCreate>({
       label: '',
       icon: '',
       color: '#000000'
     })
     
-    const [newExhibit, setNewExhibit] = useState<Exhibit>({
-      id: '',
-      title: '',
-      description: '',
-      image: '',
-      category: '',
-      details: {
-        elementary: '',
-        'middle-school': '',
-        'high-school': '',
-        college: '',
-        expert: ''
-      }
+    const [newExhibit, setNewExhibit] = useState<ExhibitCreate>({
+        title: '',
+        description: '',
+        image: '',
+        topic_id: '',
+        details: ''
     })
   
     const handleSaveTopic = () => {
       if (editingId) {
-        updateTopic.mutate({ id: editingId, ...newTopic })
+        updateTopic.mutate({ id: editingId, topic: newTopic })
       } else {
         createTopic.mutate(newTopic)
       }
-      setNewTopic({ id: '', label: '', icon: '', color: '#000000' })
+      setNewTopic({ label: '', icon: '', color: '#000000' })
       setEditingId(null)
     }
   
     const handleSaveExhibit = () => {
       if (editingId) {
-        updateExhibit.mutate({ id: editingId, ...newExhibit })
+        updateExhibit.mutate({ id: editingId, exhibit: newExhibit })
       } else {
         createExhibit.mutate(newExhibit)
       }
       setNewExhibit({
-        id: '',
         title: '',
         description: '',
         image: '',
-        category: '',
+        topic_id: '',
         details: {
           elementary: '',
           'middle-school': '',
@@ -120,10 +123,16 @@ export default function AdminPage() {
       setEditingId(id)
       if (type === 'topic') {
         const topic = topics.find((t: Topic) => t.id === id)
-        if (topic) setNewTopic(topic)
+        if (topic) {
+          const { id: _, ...topicCreate } = topic
+          setNewTopic(topicCreate)
+        }
       } else {
         const exhibit = exhibits.find((e: Exhibit) => e.id === id)
-        if (exhibit) setNewExhibit(exhibit)
+        if (exhibit) {
+          const { id: _, ...exhibitCreate } = exhibit
+          setNewExhibit(exhibitCreate)
+        }
       }
     }
   
@@ -247,16 +256,55 @@ export default function AdminPage() {
                       label: { color: 'var(--text-color)' } 
                     }}
                   />
+                  <FormControl>
+                    <InputLabel sx={{ color: 'var(--text-color)' }}>Topic</InputLabel>
+                    <Select
+                      value={newExhibit.topic_id}
+                      onChange={(e) => setNewExhibit({...newExhibit, topic_id: e.target.value})}
+                      sx={{ 
+                        color: 'var(--text-color)',
+                        '& .MuiOutlinedInput-notchedOutline': { borderColor: 'var(--paper-border)' }
+                      }}
+                    >
+                      {topics.map((topic: Topic) => (
+                        <MenuItem key={topic.id} value={topic.id}>
+                          {topic.icon} {topic.label}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
                   <TextField
-                    label="Category"
-                    value={newExhibit.category}
-                    onChange={(e) => setNewExhibit({...newExhibit, category: e.target.value})}
+                    label="Image URL"
+                    value={newExhibit.image}
+                    onChange={(e) => setNewExhibit({...newExhibit, image: e.target.value})}
                     sx={{ 
-                      '& .MuiInputBase-input': { color: 'var(--text-color)' },
-                      '& .MuiInputLabel-root': { color: 'var(--text-secondary)' },
-                      '& .MuiOutlinedInput-notchedOutline': { borderColor: 'var(--paper-border)' }
+                      input: { color: 'var(--text-color)' }, 
+                      label: { color: 'var(--text-color)' } 
                     }}
                   />
+                  <Typography variant="h6" sx={{ color: 'var(--text-color)', mt: 2 }}>
+                    Details by Education Level
+                  </Typography>
+                  {Object.entries(newExhibit.details).map(([level, content]) => (
+                    <TextField
+                      key={level}
+                      label={level.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                      value={content}
+                      onChange={(e) => setNewExhibit({
+                        ...newExhibit,
+                        details: {
+                          ...newExhibit.details,
+                          [level]: e.target.value
+                        }
+                      })}
+                      multiline
+                      rows={2}
+                      sx={{ 
+                        textarea: { color: 'var(--text-color)' }, 
+                        label: { color: 'var(--text-color)' } 
+                      }}
+                    />
+                  ))}
                   <Button variant="contained" onClick={handleSaveExhibit}>
                     {editingId ? 'Update Exhibit' : 'Add Exhibit'}
                   </Button>

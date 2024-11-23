@@ -10,7 +10,15 @@ import '@fontsource/roboto/700.css';
 import './styles/global.css';
 import { routeTree } from './routeTree.gen';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: 1000 * 60 * 5, // 5 minutes
+      retry: 1
+    },
+  },
+});
 const router = createRouter({ routeTree });
 
 declare module '@tanstack/react-router' {

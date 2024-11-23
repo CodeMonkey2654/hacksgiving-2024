@@ -31,7 +31,7 @@ const FeedbackSection: React.FC<FeedbackSectionProps> = ({
       <Rating
         value={rating}
         onChange={(_, value) => setRating(value)}
-        sx={{ '& .MuiRating-iconFilled': { color: '#C084FC' } }}
+        sx={{ '& .MuiRating-iconFilled': { color: 'var(--text-color)' } }}
       />
       <TextField
         multiline

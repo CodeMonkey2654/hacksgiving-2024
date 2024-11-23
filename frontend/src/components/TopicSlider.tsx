@@ -24,7 +24,7 @@ const TopicSlider: React.FC<TopicSliderProps> = ({ topic, value, onChange }) => 
         sx={{
           color: topic.color,
           '& .MuiSlider-thumb': {
-            backgroundColor: '#fff'
+            backgroundColor: 'var(--text-color)'
           }
         }}
       />
