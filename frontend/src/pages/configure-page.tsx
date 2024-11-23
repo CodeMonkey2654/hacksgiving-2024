@@ -1,33 +1,21 @@
 import * as React from 'react'
-import { createLazyFileRoute } from '@tanstack/react-router'
 import { Box, Container, Typography, Paper, Stack } from '@mui/material'
 import ComplexitySlider from '../components/ComplexitySlider'
 import TopicSlider from '../components/TopicSlider'
 import GradientTypography from '../components/GradientTypography'
 import StartJourneyButton from '../components/StartJourneyButton'
-
-const TOPICS = [
-  { id: 'history', label: 'History & Culture', icon: '🏺', color: '#60A5FA' },
-  { id: 'science', label: 'Science & Technology', icon: '🔬', color: '#C084FC' },
-  { id: 'nature', label: 'Nature & Environment', icon: '🌿', color: '#F472B6' },
-  { id: 'engineering', label: 'Engineering & Machines', icon: '⚙️', color: '#818CF8' },
-  { id: 'arts', label: 'Arts & Music', icon: '🎨', color: '#34D399' },
-  { id: 'interactive', label: 'Interactive Activities', icon: '🤝', color: '#FBBF24' },
-] as const;
+import { useTopics } from '../api/queries'
 
 export default function ConfigurePage() {
+  const { data: topics = [] } = useTopics();
+
   const [complexity, setComplexity] = React.useState(() => {
     return Number(localStorage.getItem('complexity')) || 50
   });
 
   const [topicInterests, setTopicInterests] = React.useState<Record<string, number>>(() => {
     const savedInterests = localStorage.getItem('topicInterests')
-    return savedInterests ? JSON.parse(savedInterests) : {
-      physics: 50,
-      chemistry: 50,
-      biology: 50,
-      astronomy: 50
-    }
+    return savedInterests ? JSON.parse(savedInterests) : {}
   });
 
   React.useEffect(() => {
@@ -74,11 +62,11 @@ export default function ConfigurePage() {
               Topics of Interest
             </Typography>
             <Stack spacing={3}>
-              {TOPICS.map(topic => (
+              {topics.map(topic => (
                 <TopicSlider
                   key={topic.id}
                   topic={topic}
-                  value={topicInterests[topic.id]}
+                  value={topicInterests[topic.id] ?? 50}
                   onChange={handleInterestChange}
                 />
               ))}

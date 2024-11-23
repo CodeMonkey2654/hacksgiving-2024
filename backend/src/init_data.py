@@ -1,10 +1,8 @@
-from sqlalchemy.orm import Session
-from src.database import SessionLocal, engine, Base
-from src.crud import create_topic, create_exhibit
-from src.schemas import TopicCreate, ExhibitCreate
-from src.models import Topic
-import uuid
-import json
+from database.database import SessionLocal, engine
+from database.base import Base
+from database.crud import create_topic, create_exhibit
+from database.schemas import TopicCreate, ExhibitCreate
+from database.models import Topic
 
 def init_db():
     Base.metadata.create_all(bind=engine)
@@ -52,26 +50,14 @@ def init_db():
             description="Explore the fascinating world of quantum mechanics",
             image="⚛️",
             topic_id=topic_ids["Physics"],
-            details=json.dumps({
-                "elementary": "Learn about tiny particles that make up everything!",
-                "middle-school": "Discover the basics of quantum mechanics",
-                "high-school": "Explore wave-particle duality and quantum states",
-                "college": "Study quantum mechanics mathematics and principles",
-                "expert": "Deep dive into quantum field theory"
-            })
+            details="Quantum mechanics is a fundamental theory in physics that describes nature at the atomic and subatomic scales. Through interactive demonstrations, visitors can learn about wave-particle duality, quantum superposition, and the strange behavior of particles at the quantum level."
         ),
         ExhibitCreate(
             title="Chemical Reactions",
             description="Witness spectacular chemical transformations",
             image="🧪",
             topic_id=topic_ids["Chemistry"],
-            details=json.dumps({
-                "elementary": "Watch amazing color changes and bubbles!",
-                "middle-school": "Learn about different types of reactions",
-                "high-school": "Study reaction rates and equilibrium",
-                "college": "Explore reaction mechanisms and kinetics",
-                "expert": "Advanced topics in physical chemistry"
-            })
+            details="Experience the excitement of chemical reactions firsthand. Watch as substances combine to create new compounds, releasing energy in the form of light, heat, or gas. Learn about reaction types, catalysts, and the principles of chemical bonding."
         )
     ]
     

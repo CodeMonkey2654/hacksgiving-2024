@@ -21,7 +21,7 @@ class ExhibitBase(BaseModel):
     description: str
     image: str
     topic_id: str
-    details: str
+    details: str  # Changed from Dict to str
 
 class ExhibitCreate(ExhibitBase):
     pass

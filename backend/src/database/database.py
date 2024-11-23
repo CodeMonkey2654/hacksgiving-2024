@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 import uuid
 from .base import Base
-from .models import Topic, Exhibit, Visit, User  # Import models instead of redefining them
+from .models import Topic
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///./museum.db"
 
