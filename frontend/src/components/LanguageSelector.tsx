@@ -12,18 +12,19 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ language, handleLan
       size="small"
       sx={{
         minWidth: 120,
+        mr: 3,
         '& .MuiOutlinedInput-root': {
-          color: 'white',
+          color: 'var(--text-color)',
           '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.3)' },
           '&:hover fieldset': { borderColor: 'rgba(255, 255, 255, 0.5)' }
         },
-        '& .MuiSelect-icon': { color: 'white' }
+        '& .MuiSelect-icon': { color: 'var(--text-color)' }
       }}
     >
       <Select
         value={language}
         onChange={handleLanguageChange}
-        startAdornment={<Language sx={{ mr: 1, color: 'white' }} />}
+        startAdornment={<Language sx={{ mr: 1, color: 'var(--text-color)' }} />}
       >
         <MenuItem value="en">English</MenuItem>
         <MenuItem value="es">Español</MenuItem>

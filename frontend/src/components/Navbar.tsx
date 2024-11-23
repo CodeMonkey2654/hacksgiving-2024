@@ -1,25 +1,29 @@
 import { AppBar, Toolbar, Button, Box } from '@mui/material'
 import { Link } from '@tanstack/react-router'
+import ThemeToggle from './ThemeToggle.tsx'
 
 const Navbar = () => {
   return (
     <AppBar 
       position="sticky" 
       sx={{ 
-        background: 'rgba(255, 255, 255, 0.05)',
+        background: 'var(--paper-bg)',
         backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        borderBottom: '1px solid var(--paper-border)',
+        boxShadow: 'var(--card-shadow)',
         zIndex: 1000
       }}
     >
       <Toolbar>
         <Button 
           component={Link} 
+          variant="contained"
           to="/"
           sx={{ 
-            color: 'white',
+            textColor: 'var(--text-color)',
+            color: 'var(--secondary)',
             '&:hover': {
-              background: 'rgba(255, 255, 255, 0.1)'
+              background: 'var(--hover-bg)'
             }
           }}
         >
@@ -27,15 +31,18 @@ const Navbar = () => {
         </Button>
 
         <Box sx={{ flexGrow: 1 }} />
+        
+        <ThemeToggle />
 
         <Box sx={{ display: 'flex', gap: 2 }}>
           <Button
             component={Link}
             to="/exhibits"
+            variant="contained"
             sx={{ 
-              color: 'white',
+              color: 'var(--text-color)',
               '&:hover': {
-                background: 'rgba(255, 255, 255, 0.1)'
+                background: 'var(--hover-bg)'
               }
             }}
           >
@@ -45,12 +52,7 @@ const Navbar = () => {
           <Button
             component={Link}
             to="/configure"
-            sx={{ 
-              color: 'white',
-              '&:hover': {
-                background: 'rgba(255, 255, 255, 0.1)'
-              }
-            }}
+            variant="contained"
           >
             Configure
           </Button>
@@ -58,12 +60,7 @@ const Navbar = () => {
           <Button
             component={Link}
             to="/admin"
-            sx={{ 
-              color: 'white',
-              '&:hover': {
-                background: 'rgba(255, 255, 255, 0.1)'
-              }
-            }}
+            variant="contained"
           >
             Admin
           </Button>

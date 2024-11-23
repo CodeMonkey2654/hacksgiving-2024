@@ -128,26 +128,30 @@ export default function AdminPage() {
     }
   
     return (
-      <Box sx={{ py: 4, minHeight: '100vh', background: 'linear-gradient(135deg, #0f1642 0%, #2a1650 50%, #3a1357 100%)' }}>
+      <Box sx={{ 
+        py: 4, 
+        minHeight: '100vh', 
+        background: 'var(--background-gradient)' 
+      }}>
         <Container maxWidth="lg">
-          <Typography variant="h4" sx={{ color: 'white', mb: 4 }}>
+          <Typography variant="h4" sx={{ color: 'var(--text-color)', mb: 4 }}>
             Admin Dashboard
           </Typography>
   
           <Paper sx={{ 
             p: 3, 
-            background: 'rgba(255, 255, 255, 0.05)',
+            background: 'var(--paper-bg)',
             backdropFilter: 'blur(10px)',
             borderRadius: 4,
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+            border: '1px solid var(--paper-border)'
           }}>
             <Tabs 
               value={activeTab} 
               onChange={(_, newValue) => setActiveTab(newValue)}
               sx={{ mb: 3 }}
             >
-              <Tab label="Topics" sx={{ color: 'white' }} />
-              <Tab label="Exhibits" sx={{ color: 'white' }} />
+              <Tab label="Topics" sx={{ color: 'var(--text-color)' }} />
+              <Tab label="Exhibits" sx={{ color: 'var(--text-color)' }} />
             </Tabs>
   
             {activeTab === 0 && (
@@ -157,20 +161,29 @@ export default function AdminPage() {
                     label="Label"
                     value={newTopic.label}
                     onChange={(e) => setNewTopic({...newTopic, label: e.target.value})}
-                    sx={{ input: { color: 'white' }, label: { color: 'white' } }}
+                    sx={{ 
+                      input: { color: 'var(--text-color)' }, 
+                      label: { color: 'var(--text-color)' } 
+                    }}
                   />
                   <TextField
                     label="Icon"
                     value={newTopic.icon}
                     onChange={(e) => setNewTopic({...newTopic, icon: e.target.value})}
-                    sx={{ input: { color: 'white' }, label: { color: 'white' } }}
+                    sx={{ 
+                      input: { color: 'var(--text-color)' }, 
+                      label: { color: 'var(--text-color)' } 
+                    }}
                   />
                   <TextField
                     label="Color"
                     type="color"
                     value={newTopic.color}
                     onChange={(e) => setNewTopic({...newTopic, color: e.target.value})}
-                    sx={{ input: { color: 'white' }, label: { color: 'white' } }}
+                    sx={{ 
+                      input: { color: 'var(--text-color)' }, 
+                      label: { color: 'var(--text-color)' } 
+                    }}
                   />
                   <Button variant="contained" onClick={handleSaveTopic}>
                     {editingId ? 'Update Topic' : 'Add Topic'}
@@ -182,20 +195,26 @@ export default function AdminPage() {
                     <ListItem 
                       key={topic.id}
                       sx={{ 
-                        bgcolor: 'rgba(255, 255, 255, 0.1)',
+                        bgcolor: 'var(--paper-bg)',
                         mb: 1,
                         borderRadius: 1
                       }}
                     >
                       <ListItemText 
                         primary={`${topic.icon} ${topic.label}`}
-                        sx={{ color: 'white' }}
+                        sx={{ color: 'var(--text-color)' }}
                       />
                       <ListItemSecondaryAction>
-                        <IconButton onClick={() => handleEdit('topic', topic.id)} sx={{ color: 'white' }}>
+                        <IconButton 
+                          onClick={() => handleEdit('topic', topic.id)} 
+                          sx={{ color: 'var(--text-color)' }}
+                        >
                           <Edit />
                         </IconButton>
-                        <IconButton onClick={() => handleDelete('topic', topic.id)} sx={{ color: 'white' }}>
+                        <IconButton 
+                          onClick={() => handleDelete('topic', topic.id)} 
+                          sx={{ color: 'var(--text-color)' }}
+                        >
                           <Delete />
                         </IconButton>
                       </ListItemSecondaryAction>
@@ -212,7 +231,10 @@ export default function AdminPage() {
                     label="Title"
                     value={newExhibit.title}
                     onChange={(e) => setNewExhibit({...newExhibit, title: e.target.value})}
-                    sx={{ input: { color: 'white' }, label: { color: 'white' } }}
+                    sx={{ 
+                      input: { color: 'var(--text-color)' }, 
+                      label: { color: 'var(--text-color)' } 
+                    }}
                   />
                   <TextField
                     label="Description"
@@ -220,13 +242,20 @@ export default function AdminPage() {
                     onChange={(e) => setNewExhibit({...newExhibit, description: e.target.value})}
                     multiline
                     rows={2}
-                    sx={{ input: { color: 'white' }, label: { color: 'white' } }}
+                    sx={{ 
+                      textarea: { color: 'var(--text-color)' }, 
+                      label: { color: 'var(--text-color)' } 
+                    }}
                   />
                   <TextField
                     label="Category"
                     value={newExhibit.category}
                     onChange={(e) => setNewExhibit({...newExhibit, category: e.target.value})}
-                    sx={{ input: { color: 'white' }, label: { color: 'white' } }}
+                    sx={{ 
+                      '& .MuiInputBase-input': { color: 'var(--text-color)' },
+                      '& .MuiInputLabel-root': { color: 'var(--text-secondary)' },
+                      '& .MuiOutlinedInput-notchedOutline': { borderColor: 'var(--paper-border)' }
+                    }}
                   />
                   <Button variant="contained" onClick={handleSaveExhibit}>
                     {editingId ? 'Update Exhibit' : 'Add Exhibit'}
@@ -238,7 +267,7 @@ export default function AdminPage() {
                     <ListItem
                       key={exhibit.id}
                       sx={{ 
-                        bgcolor: 'rgba(255, 255, 255, 0.1)',
+                        bgcolor: 'var(--paper-bg)',
                         mb: 1,
                         borderRadius: 1
                       }}
@@ -247,15 +276,21 @@ export default function AdminPage() {
                         primary={exhibit.title}
                         secondary={exhibit.description}
                         sx={{ 
-                          '& .MuiListItemText-primary': { color: 'white' },
-                          '& .MuiListItemText-secondary': { color: 'rgba(255, 255, 255, 0.7)' }
+                          '& .MuiListItemText-primary': { color: 'var(--text-color)' },
+                          '& .MuiListItemText-secondary': { color: 'var(--text-color)', opacity: 0.7 }
                         }}
                       />
                       <ListItemSecondaryAction>
-                        <IconButton onClick={() => handleEdit('exhibit', exhibit.id)} sx={{ color: 'white' }}>
+                        <IconButton 
+                          onClick={() => handleEdit('exhibit', exhibit.id)} 
+                          sx={{ color: 'var(--text-color)' }}
+                        >
                           <Edit />
                         </IconButton>
-                        <IconButton onClick={() => handleDelete('exhibit', exhibit.id)} sx={{ color: 'white' }}>
+                        <IconButton 
+                          onClick={() => handleDelete('exhibit', exhibit.id)} 
+                          sx={{ color: 'var(--text-color)' }}
+                        >
                           <Delete />
                         </IconButton>
                       </ListItemSecondaryAction>

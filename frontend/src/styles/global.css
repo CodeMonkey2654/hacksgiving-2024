@@ -1,5 +1,33 @@
 :root {
-  --background-gradient: linear-gradient(135deg, #0f1642 0%, #2a1650 50%, #3a1357 100%);
+  /* Brand Colors */
+  --primary: #2c2873;
+  --primary-light: #2d2c75;
+  --primary-dark: #2c2873;
+  --secondary: #eb548c;
+  --secondary-light: #ff6ea3;
+  --secondary-dark: #d13a75;
+}
+
+:root[data-theme='light'] {
+  --background-gradient: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  --text-color: var(--primary);
+  --text-secondary: var(--primary-light);
+  --paper-bg: rgba(255, 255, 255, 0.9);
+  --paper-border: rgba(28, 27, 76, 0.1);
+  --hover-bg: rgba(235, 84, 140, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --backdrop-bg: rgba(255, 255, 255, 0.8);
+}
+
+:root[data-theme='dark'] {
+  --background-gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  --text-color: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --paper-bg: rgba(28, 27, 76, 0.6);
+  --paper-border: rgba(235, 84, 140, 0.2);
+  --hover-bg: rgba(235, 84, 140, 0.1);
+  --card-bg: rgba(28, 27, 76, 0.8);
+  --backdrop-bg: rgba(28, 27, 76, 0.8);
 }
 
 html, body, #root {
@@ -8,8 +36,9 @@ html, body, #root {
   min-height: 100vh;
   width: 100%;
   background: var(--background-gradient);
-  color: white;
+  color: var(--text-color);
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -21,14 +50,112 @@ html, body, #root {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(192, 132, 252, 0.3);
+  background: var(--scrollbar-thumb);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(192, 132, 252, 0.5);
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* MUI overrides */
+.MuiPaper-root {
+  background: var(--paper-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--paper-border) !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.MuiButton-contained {
+  background: var(--secondary) !important;
+  color: var(--text-color) !important;
+}
+
+.MuiButton-contained:hover {
+  background: var(--secondary-dark) !important;
+}
+
+.MuiButton-outlined {
+  border-color: var(--secondary) !important;
+  color: var(--secondary) !important;
+}
+
+.MuiButton-outlined:hover {
+  background: var(--hover-bg) !important;
+}
+
+.MuiInputBase-root {
+  color: var(--text-color) !important;
+}
+
+.MuiInputLabel-root {
+  color: var(--text-secondary) !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--paper-border) !important;
+}
+
+/* Additional utility classes */
+.text-gradient {
+  background: linear-gradient(45deg, #60A5FA, #C084FC, #F472B6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.blur-backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Transitions */
+.theme-transition {
+  transition: all 0.3s ease;
+}
+
+/* Add these to the MUI overrides section */
+.MuiTypography-root {
+  color: var(--text-color) !important;
+}
+
+.MuiTab-root {
+  color: var(--text-color) !important;
+}
+
+.MuiIconButton-root {
+  color: var(--text-color) !important;
+}
+
+.MuiListItemText-primary {
+  color: var(--text-color) !important;
+
+}
+
+.MuiListItemText-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.MuiTextField-root {
+  & .MuiInputBase-input {
+    color: var(--text-color) !important;
+  }
+  & .MuiInputLabel-root {
+    color: var(--text-secondary) !important;
+  }
+  & .MuiOutlinedInput-notchedOutline {
+    border-color: var(--paper-border) !important;
+  }
+}
+
+.MuiBox-root {
+  background-color: transparent;
+}
+
+.MuiContainer-root {
+  background-color: transparent;
 } 
