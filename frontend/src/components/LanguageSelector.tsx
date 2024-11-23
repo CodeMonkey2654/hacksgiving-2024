@@ -13,7 +13,9 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ language, handleLan
       sx={{
         minWidth: 120,
         mr: 3,
+        backgroundColor: 'var(--paper-bg)',
         '& .MuiOutlinedInput-root': {
+          backgroundColor: 'var(--paper-bg)',
           color: 'var(--text-color)',
           '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.3)' },
           '&:hover fieldset': { borderColor: 'rgba(255, 255, 255, 0.5)' }

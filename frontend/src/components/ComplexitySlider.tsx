@@ -26,7 +26,7 @@ const ComplexitySlider: React.FC<ComplexitySliderProps> = ({ complexity, setComp
           sx={{
             color: '#C084FC',
             '& .MuiSlider-thumb': {
-              backgroundColor: '#fff'
+              backgroundColor: 'var(--text-color)'
             }
           }}
         />

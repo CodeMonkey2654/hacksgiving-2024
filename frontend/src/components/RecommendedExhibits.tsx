@@ -37,6 +37,7 @@ const RecommendedExhibits: React.FC<RecommendedExhibitsProps> = ({ exhibits }) =
       sx={{
         mt: 2,
         width: '100%',
+        textColor: 'var(--text-color)',
         color: '#C084FC',
         borderColor: '#C084FC',
         '&:hover': {
@@ -44,7 +45,7 @@ const RecommendedExhibits: React.FC<RecommendedExhibitsProps> = ({ exhibits }) =
           color: '#9c5cfa'
         }
       }}
-      variant="outlined"
+      variant="contained"
     >
       See All Exhibits
     </Button>

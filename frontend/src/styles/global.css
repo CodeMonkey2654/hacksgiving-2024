@@ -9,10 +9,10 @@
 }
 
 :root[data-theme='light'] {
-  --background-gradient: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  --background-gradient: linear-gradient(135deg, #d2e2f3 0%, #d2e2f3 100%);
   --text-color: var(--primary);
   --text-secondary: var(--primary-light);
-  --paper-bg: rgba(255, 255, 255, 0.9);
+  --paper-bg: #c2d5ea;
   --paper-border: rgba(28, 27, 76, 0.1);
   --hover-bg: rgba(235, 84, 140, 0.1);
   --card-bg: rgba(255, 255, 255, 0.95);
