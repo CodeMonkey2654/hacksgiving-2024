@@ -21,7 +21,7 @@ class ExhibitBase(BaseModel):
     description: str
     image: str
     topic_id: str
-    details: Dict[str, str]
+    details: str
 
 class ExhibitCreate(ExhibitBase):
     pass
@@ -33,7 +33,7 @@ class Exhibit(ExhibitBase):
         from_attributes = True
 
 class UserBase(BaseModel):
-    interests: Dict[str, int]
+    interests: str
     language: str
     reading_level: str
 
@@ -46,13 +46,16 @@ class User(UserBase):
     class Config:
         from_attributes = True
 
-class VisitCreate(BaseModel):
+class VisitBase(BaseModel):
     user_id: str
     exhibit_id: str
 
-class Visit(VisitCreate):
+class VisitCreate(VisitBase):
+    pass
+
+class Visit(VisitBase):
     id: int
-    timestamp: datetime
+    timestamp: str
     
     class Config:
         from_attributes = True 

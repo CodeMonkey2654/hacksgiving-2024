@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from models import Topic, Exhibit, User, Visit
-import schemas
+from database.models import Topic, Exhibit, User, Visit
+import database.schemas as schemas
 from fastapi import HTTPException
 import uuid
 
@@ -66,6 +66,9 @@ def delete_exhibit(db: Session, exhibit_id: str):
 
 def get_users(db: Session):
     return db.query(User).all()
+
+def get_user(db: Session, user_id: str):
+    return db.query(User).filter(User.id == user_id).first()
 
 def create_user(db: Session, user: schemas.UserCreate):
     db_user = User(**user.dict())
