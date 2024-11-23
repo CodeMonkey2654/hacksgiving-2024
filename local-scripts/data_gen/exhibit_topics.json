@@ -1,1 +1,3422 @@
-[{"exhibit_id": "exhibit_0", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_0", "topic_id": "topic_3", "relevance": 0.5}, {"exhibit_id": "exhibit_0", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_0", "topic_id": "topic_6", "relevance": 0.5}, {"exhibit_id": "exhibit_0", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_1", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_1", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_1", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_1", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_1", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_1", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_1", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_1", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_1", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_2", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_2", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_2", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_2", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_3", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_3", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_3", "topic_id": "topic_5", "relevance": 0.5}, {"exhibit_id": "exhibit_3", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_4", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_4", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_4", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_4", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_5", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_5", "topic_id": "topic_3", "relevance": 0.5}, {"exhibit_id": "exhibit_6", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_6", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_6", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_6", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_7", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_7", "topic_id": "topic_1", "relevance": 0.5}, {"exhibit_id": "exhibit_7", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_7", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_7", "topic_id": "topic_6", "relevance": 0.5}, {"exhibit_id": "exhibit_8", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_8", "topic_id": "topic_1", "relevance": 0.5}, {"exhibit_id": "exhibit_8", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_8", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_8", "topic_id": "topic_6", "relevance": 0.5}, {"exhibit_id": "exhibit_9", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_9", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_9", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_10", "topic_id": "topic_0", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_10", "topic_id": "topic_2", "relevance": 0.6666666666666666}, {"exhibit_id": "exhibit_10", "topic_id": "topic_4", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_10", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_11", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_11", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_11", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_11", "topic_id": "topic_6", "relevance": 0.5}, {"exhibit_id": "exhibit_11", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_12", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_12", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_12", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_12", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_13", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_13", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_13", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_13", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_13", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_13", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_13", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_13", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_13", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_14", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_15", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_16", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_17", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_18", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_19", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_20", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_21", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_22", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_23", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_23", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_23", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_23", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_23", "topic_id": "topic_7", "relevance": 0.5}, {"exhibit_id": "exhibit_24", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_24", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_24", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_24", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_24", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_24", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_24", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_24", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_24", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_25", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_25", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_25", "topic_id": "topic_6", "relevance": 0.5}, {"exhibit_id": "exhibit_25", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_26", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_26", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_26", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_26", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_26", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_26", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_26", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_26", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_26", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_27", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_27", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_28", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_28", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_29", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_29", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_30", "topic_id": "topic_3", "relevance": 0.5}, {"exhibit_id": "exhibit_30", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_30", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_31", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_31", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_32", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_32", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_32", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_32", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_33", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_33", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_33", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_34", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_34", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_34", "topic_id": "topic_3", "relevance": 0.5}, {"exhibit_id": "exhibit_34", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_35", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_35", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_35", "topic_id": "topic_3", "relevance": 0.5}, {"exhibit_id": "exhibit_35", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_36", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_36", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_36", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_36", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_37", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_37", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_37", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_37", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_37", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_37", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_37", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_37", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_37", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_38", "topic_id": "topic_0", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_38", "topic_id": "topic_3", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_38", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_38", "topic_id": "topic_6", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_39", "topic_id": "topic_3", "relevance": 0.25}, {"exhibit_id": "exhibit_39", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_40", "topic_id": "topic_3", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_40", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_41", "topic_id": "topic_3", "relevance": 0.5}, {"exhibit_id": "exhibit_41", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_41", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_42", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_42", "topic_id": "topic_3", "relevance": 0.5}, {"exhibit_id": "exhibit_42", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_43", "topic_id": "topic_0", "relevance": 0.16666666666666666}, {"exhibit_id": "exhibit_43", "topic_id": "topic_1", "relevance": 0.16666666666666666}, {"exhibit_id": "exhibit_43", "topic_id": "topic_2", "relevance": 0.16666666666666666}, {"exhibit_id": "exhibit_43", "topic_id": "topic_3", "relevance": 0.16666666666666666}, {"exhibit_id": "exhibit_43", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_44", "topic_id": "topic_0", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_44", "topic_id": "topic_3", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_44", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_45", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_45", "topic_id": "topic_3", "relevance": 0.5}, {"exhibit_id": "exhibit_45", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_46", "topic_id": "topic_3", "relevance": 0.25}, {"exhibit_id": "exhibit_46", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_47", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_47", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_47", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_47", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_47", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_47", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_47", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_47", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_47", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_48", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_49", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_50", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_51", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_52", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_53", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_54", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_55", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_56", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_57", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_58", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_59", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_59", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_59", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_59", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_60", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_60", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_61", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_61", "topic_id": "topic_6", "relevance": 0.5}, {"exhibit_id": "exhibit_61", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_62", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_63", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_63", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_63", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_64", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_64", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_64", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_65", "topic_id": "topic_6", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_65", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_66", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_66", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_66", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_66", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_66", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_66", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_66", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_66", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_66", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_67", "topic_id": "topic_2", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_67", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_68", "topic_id": "topic_2", "relevance": 0.2}, {"exhibit_id": "exhibit_68", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_69", "topic_id": "topic_3", "relevance": 0.2}, {"exhibit_id": "exhibit_69", "topic_id": "topic_4", "relevance": 0.2}, {"exhibit_id": "exhibit_69", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_69", "topic_id": "topic_7", "relevance": 0.2}, {"exhibit_id": "exhibit_70", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_70", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_71", "topic_id": "topic_0", "relevance": 0.25}, {"exhibit_id": "exhibit_71", "topic_id": "topic_2", "relevance": 0.25}, {"exhibit_id": "exhibit_71", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_72", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_72", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_73", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_74", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_74", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_74", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_74", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_74", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_74", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_74", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_74", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_74", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_75", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_75", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_76", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_76", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_76", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_77", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_77", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_77", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_77", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_77", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_77", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_77", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_77", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_77", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_78", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_79", "topic_id": "topic_6", "relevance": 0.2}, {"exhibit_id": "exhibit_79", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_79", "topic_id": "topic_8", "relevance": 0.2}, {"exhibit_id": "exhibit_80", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_81", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_81", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_81", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_81", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_82", "topic_id": "topic_1", "relevance": 0.5}, {"exhibit_id": "exhibit_82", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_82", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_82", "topic_id": "topic_8", "relevance": 0.5}, {"exhibit_id": "exhibit_83", "topic_id": "topic_1", "relevance": 0.5}, {"exhibit_id": "exhibit_83", "topic_id": "topic_5", "relevance": 0.5}, {"exhibit_id": "exhibit_83", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_84", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_84", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_85", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_86", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_87", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_87", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_87", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_87", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_87", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_87", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_87", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_87", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_87", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_88", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_89", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_89", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_90", "topic_id": "topic_0", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_90", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_91", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_91", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_91", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_92", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_92", "topic_id": "topic_4", "relevance": 0.25}, {"exhibit_id": "exhibit_93", "topic_id": "topic_0", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_93", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_94", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_94", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_94", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_94", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_94", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_94", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_94", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_94", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_94", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_95", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_95", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_95", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_96", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_96", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_96", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_96", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_96", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_96", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_96", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_96", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_96", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_97", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_98", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_98", "topic_id": "topic_4", "relevance": 0.2}, {"exhibit_id": "exhibit_98", "topic_id": "topic_5", "relevance": 0.2}, {"exhibit_id": "exhibit_99", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_99", "topic_id": "topic_4", "relevance": 0.2}, {"exhibit_id": "exhibit_100", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_100", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_100", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_100", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_100", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_100", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_100", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_100", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_100", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_101", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_102", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_103", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_103", "topic_id": "topic_8", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_104", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_104", "topic_id": "topic_4", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_105", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_105", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_105", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_105", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_105", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_105", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_105", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_105", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_105", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_106", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_107", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_107", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_107", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_108", "topic_id": "topic_0", "relevance": 1.0}, {"exhibit_id": "exhibit_108", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_109", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_109", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_109", "topic_id": "topic_5", "relevance": 0.5}, {"exhibit_id": "exhibit_110", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_110", "topic_id": "topic_7", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_111", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_111", "topic_id": "topic_5", "relevance": 0.5}, {"exhibit_id": "exhibit_112", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_112", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_112", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_113", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_113", "topic_id": "topic_1", "relevance": 0.5}, {"exhibit_id": "exhibit_113", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_113", "topic_id": "topic_7", "relevance": 0.5}, {"exhibit_id": "exhibit_114", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_114", "topic_id": "topic_7", "relevance": 1.0}, {"exhibit_id": "exhibit_115", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_115", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_116", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_116", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_116", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_116", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_116", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_116", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_116", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_116", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_116", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_117", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_117", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_117", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_118", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_118", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_118", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_118", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_118", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_118", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_118", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_118", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_118", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_119", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_119", "topic_id": "topic_5", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_119", "topic_id": "topic_6", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_120", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_121", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_121", "topic_id": "topic_5", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_121", "topic_id": "topic_6", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_122", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_122", "topic_id": "topic_5", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_122", "topic_id": "topic_6", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_123", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_123", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_123", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_124", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_124", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_125", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_125", "topic_id": "topic_2", "relevance": 0.6666666666666666}, {"exhibit_id": "exhibit_125", "topic_id": "topic_6", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_126", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_126", "topic_id": "topic_2", "relevance": 0.5}, {"exhibit_id": "exhibit_126", "topic_id": "topic_6", "relevance": 0.5}, {"exhibit_id": "exhibit_127", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_127", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_127", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_127", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_127", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_127", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_127", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_127", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_127", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_128", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_128", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_128", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_128", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_129", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_129", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_129", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_129", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_130", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_130", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_130", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_130", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_131", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_131", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_131", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_131", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_132", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_132", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_132", "topic_id": "topic_4", "relevance": 1.0}, {"exhibit_id": "exhibit_132", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_133", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_133", "topic_id": "topic_5", "relevance": 0.25}, {"exhibit_id": "exhibit_134", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_134", "topic_id": "topic_4", "relevance": 0.5}, {"exhibit_id": "exhibit_134", "topic_id": "topic_5", "relevance": 1.0}, {"exhibit_id": "exhibit_135", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_135", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_135", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_135", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_135", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_135", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_135", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_135", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_135", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_136", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_136", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_136", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_136", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_137", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_138", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_139", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_140", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_140", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_140", "topic_id": "topic_8", "relevance": 1.0}, {"exhibit_id": "exhibit_141", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_142", "topic_id": "topic_2", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_142", "topic_id": "topic_3", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_142", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_143", "topic_id": "topic_6", "relevance": 1.0}, {"exhibit_id": "exhibit_144", "topic_id": "topic_0", "relevance": 0.1}, {"exhibit_id": "exhibit_144", "topic_id": "topic_1", "relevance": 0.1}, {"exhibit_id": "exhibit_144", "topic_id": "topic_2", "relevance": 0.1}, {"exhibit_id": "exhibit_144", "topic_id": "topic_3", "relevance": 0.1}, {"exhibit_id": "exhibit_144", "topic_id": "topic_4", "relevance": 0.1}, {"exhibit_id": "exhibit_144", "topic_id": "topic_5", "relevance": 0.1}, {"exhibit_id": "exhibit_144", "topic_id": "topic_6", "relevance": 0.1}, {"exhibit_id": "exhibit_144", "topic_id": "topic_7", "relevance": 0.1}, {"exhibit_id": "exhibit_144", "topic_id": "topic_8", "relevance": 0.1}, {"exhibit_id": "exhibit_145", "topic_id": "topic_1", "relevance": 0.5}, {"exhibit_id": "exhibit_145", "topic_id": "topic_2", "relevance": 1.0}, {"exhibit_id": "exhibit_145", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_146", "topic_id": "topic_0", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_146", "topic_id": "topic_1", "relevance": 1.0}, {"exhibit_id": "exhibit_146", "topic_id": "topic_3", "relevance": 0.6666666666666666}, {"exhibit_id": "exhibit_146", "topic_id": "topic_5", "relevance": 0.6666666666666666}, {"exhibit_id": "exhibit_146", "topic_id": "topic_8", "relevance": 0.3333333333333333}, {"exhibit_id": "exhibit_147", "topic_id": "topic_0", "relevance": 0.5}, {"exhibit_id": "exhibit_147", "topic_id": "topic_3", "relevance": 1.0}, {"exhibit_id": "exhibit_147", "topic_id": "topic_5", "relevance": 0.5}, {"exhibit_id": "exhibit_147", "topic_id": "topic_8", "relevance": 0.5}]
+[
+    {
+        "exhibit_id": "exhibit_0",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_0",
+        "topic_id": "topic_3",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_0",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_0",
+        "topic_id": "topic_6",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_0",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_1",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_2",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_2",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_2",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_2",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_3",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_3",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_3",
+        "topic_id": "topic_5",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_3",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_4",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_4",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_4",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_4",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_5",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_5",
+        "topic_id": "topic_3",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_6",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_6",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_6",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_6",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_7",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_7",
+        "topic_id": "topic_1",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_7",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_7",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_7",
+        "topic_id": "topic_6",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_8",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_8",
+        "topic_id": "topic_1",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_8",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_8",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_8",
+        "topic_id": "topic_6",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_9",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_9",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_9",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_10",
+        "topic_id": "topic_0",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_10",
+        "topic_id": "topic_2",
+        "relevance": 0.6666666666666666
+    },
+    {
+        "exhibit_id": "exhibit_10",
+        "topic_id": "topic_4",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_10",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_11",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_11",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_11",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_11",
+        "topic_id": "topic_6",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_11",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_12",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_12",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_12",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_12",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_13",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_14",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_15",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_16",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_17",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_18",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_19",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_20",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_21",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_22",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_23",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_23",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_23",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_23",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_23",
+        "topic_id": "topic_7",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_24",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_25",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_25",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_25",
+        "topic_id": "topic_6",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_25",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_26",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_27",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_27",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_28",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_28",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_29",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_29",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_30",
+        "topic_id": "topic_3",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_30",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_30",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_31",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_31",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_32",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_32",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_32",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_32",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_33",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_33",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_33",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_34",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_34",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_34",
+        "topic_id": "topic_3",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_34",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_35",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_35",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_35",
+        "topic_id": "topic_3",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_35",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_36",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_36",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_36",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_36",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_37",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_38",
+        "topic_id": "topic_0",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_38",
+        "topic_id": "topic_3",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_38",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_38",
+        "topic_id": "topic_6",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_39",
+        "topic_id": "topic_3",
+        "relevance": 0.25
+    },
+    {
+        "exhibit_id": "exhibit_39",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_40",
+        "topic_id": "topic_3",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_40",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_41",
+        "topic_id": "topic_3",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_41",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_41",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_42",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_42",
+        "topic_id": "topic_3",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_42",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_43",
+        "topic_id": "topic_0",
+        "relevance": 0.16666666666666666
+    },
+    {
+        "exhibit_id": "exhibit_43",
+        "topic_id": "topic_1",
+        "relevance": 0.16666666666666666
+    },
+    {
+        "exhibit_id": "exhibit_43",
+        "topic_id": "topic_2",
+        "relevance": 0.16666666666666666
+    },
+    {
+        "exhibit_id": "exhibit_43",
+        "topic_id": "topic_3",
+        "relevance": 0.16666666666666666
+    },
+    {
+        "exhibit_id": "exhibit_43",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_44",
+        "topic_id": "topic_0",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_44",
+        "topic_id": "topic_3",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_44",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_45",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_45",
+        "topic_id": "topic_3",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_45",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_46",
+        "topic_id": "topic_3",
+        "relevance": 0.25
+    },
+    {
+        "exhibit_id": "exhibit_46",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_47",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_48",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_49",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_50",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_51",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_52",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_53",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_54",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_55",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_56",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_57",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_58",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_59",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_59",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_59",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_59",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_60",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_60",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_61",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_61",
+        "topic_id": "topic_6",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_61",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_62",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_63",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_63",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_63",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_64",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_64",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_64",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_65",
+        "topic_id": "topic_6",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_65",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_66",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_67",
+        "topic_id": "topic_2",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_67",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_68",
+        "topic_id": "topic_2",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_68",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_69",
+        "topic_id": "topic_3",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_69",
+        "topic_id": "topic_4",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_69",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_69",
+        "topic_id": "topic_7",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_70",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_70",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_71",
+        "topic_id": "topic_0",
+        "relevance": 0.25
+    },
+    {
+        "exhibit_id": "exhibit_71",
+        "topic_id": "topic_2",
+        "relevance": 0.25
+    },
+    {
+        "exhibit_id": "exhibit_71",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_72",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_72",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_73",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_74",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_75",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_75",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_76",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_76",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_76",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_77",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_78",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_79",
+        "topic_id": "topic_6",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_79",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_79",
+        "topic_id": "topic_8",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_80",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_81",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_81",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_81",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_81",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_82",
+        "topic_id": "topic_1",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_82",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_82",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_82",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_83",
+        "topic_id": "topic_1",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_83",
+        "topic_id": "topic_5",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_83",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_84",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_84",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_85",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_86",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_87",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_88",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_89",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_89",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_90",
+        "topic_id": "topic_0",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_90",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_91",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_91",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_91",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_92",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_92",
+        "topic_id": "topic_4",
+        "relevance": 0.25
+    },
+    {
+        "exhibit_id": "exhibit_93",
+        "topic_id": "topic_0",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_93",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_94",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_95",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_95",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_95",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_96",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_97",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_98",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_98",
+        "topic_id": "topic_4",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_98",
+        "topic_id": "topic_5",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_99",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_99",
+        "topic_id": "topic_4",
+        "relevance": 0.2
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_100",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_101",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_102",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_103",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_103",
+        "topic_id": "topic_8",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_104",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_104",
+        "topic_id": "topic_4",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_105",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_106",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_107",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_107",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_107",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_108",
+        "topic_id": "topic_0",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_108",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_109",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_109",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_109",
+        "topic_id": "topic_5",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_110",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_110",
+        "topic_id": "topic_7",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_111",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_111",
+        "topic_id": "topic_5",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_112",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_112",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_112",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_113",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_113",
+        "topic_id": "topic_1",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_113",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_113",
+        "topic_id": "topic_7",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_114",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_114",
+        "topic_id": "topic_7",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_115",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_115",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_116",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_117",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_117",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_117",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_118",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_119",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_119",
+        "topic_id": "topic_5",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_119",
+        "topic_id": "topic_6",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_120",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_121",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_121",
+        "topic_id": "topic_5",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_121",
+        "topic_id": "topic_6",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_122",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_122",
+        "topic_id": "topic_5",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_122",
+        "topic_id": "topic_6",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_123",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_123",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_123",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_124",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_124",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_125",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_125",
+        "topic_id": "topic_2",
+        "relevance": 0.6666666666666666
+    },
+    {
+        "exhibit_id": "exhibit_125",
+        "topic_id": "topic_6",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_126",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_126",
+        "topic_id": "topic_2",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_126",
+        "topic_id": "topic_6",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_127",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_128",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_128",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_128",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_128",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_129",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_129",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_129",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_129",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_130",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_130",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_130",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_130",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_131",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_131",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_131",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_131",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_132",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_132",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_132",
+        "topic_id": "topic_4",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_132",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_133",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_133",
+        "topic_id": "topic_5",
+        "relevance": 0.25
+    },
+    {
+        "exhibit_id": "exhibit_134",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_134",
+        "topic_id": "topic_4",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_134",
+        "topic_id": "topic_5",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_135",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_136",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_136",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_136",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_136",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_137",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_138",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_139",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_140",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_140",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_140",
+        "topic_id": "topic_8",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_141",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_142",
+        "topic_id": "topic_2",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_142",
+        "topic_id": "topic_3",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_142",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_143",
+        "topic_id": "topic_6",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_0",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_1",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_2",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_3",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_4",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_5",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_6",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_7",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_144",
+        "topic_id": "topic_8",
+        "relevance": 0.1
+    },
+    {
+        "exhibit_id": "exhibit_145",
+        "topic_id": "topic_1",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_145",
+        "topic_id": "topic_2",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_145",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_146",
+        "topic_id": "topic_0",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_146",
+        "topic_id": "topic_1",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_146",
+        "topic_id": "topic_3",
+        "relevance": 0.6666666666666666
+    },
+    {
+        "exhibit_id": "exhibit_146",
+        "topic_id": "topic_5",
+        "relevance": 0.6666666666666666
+    },
+    {
+        "exhibit_id": "exhibit_146",
+        "topic_id": "topic_8",
+        "relevance": 0.3333333333333333
+    },
+    {
+        "exhibit_id": "exhibit_147",
+        "topic_id": "topic_0",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_147",
+        "topic_id": "topic_3",
+        "relevance": 1.0
+    },
+    {
+        "exhibit_id": "exhibit_147",
+        "topic_id": "topic_5",
+        "relevance": 0.5
+    },
+    {
+        "exhibit_id": "exhibit_147",
+        "topic_id": "topic_8",
+        "relevance": 0.5
+    }
+]
