@@ -54,7 +54,7 @@ export default function HomePage() {
         overflow: 'auto',
       }}
     >
-      <LanguageSelector language={language} handleLanguageChange={handleLanguageChange} />
+      
 
       <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1, mt: 22.5}}>
         <Paper
