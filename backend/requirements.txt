@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-=======
 fastapi
 uvicorn
->>>>>>> ecb15eb (ui amazing)
