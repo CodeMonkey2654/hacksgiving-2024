@@ -37,6 +37,9 @@ def delete_topic(db: Session, topic_id: str):
 def get_exhibits(db: Session):
     return db.query(Exhibit).all()
 
+def get_exhibit(db: Session, exhibit_id: str):
+    return db.query(Exhibit).filter(Exhibit.id == exhibit_id).first()
+
 def create_exhibit(db: Session, exhibit: ExhibitCreate):
     db_exhibit = Exhibit(
         id=str(uuid.uuid4()),

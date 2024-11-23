@@ -4,9 +4,11 @@ import database.crud as crud
 from ai.chat import ChatKnowledgeBase, ChatManager
 import json
 from dependencies import get_db
+from pydantic import BaseModel, Field
+from typing import Dict, Any
 
 router = APIRouter(
-    prefix="/chat",
+    prefix="",
     tags=["chat"]
 )
 
@@ -14,43 +16,49 @@ router = APIRouter(
 knowledge_base = ChatKnowledgeBase()
 chat_manager = ChatManager(knowledge_base)
 
-@router.post("/{user_id}/{session_id}")
-def chat_with_exhibit(
-    user_id: str, 
-    session_id: str,
-    message: str = Body(..., embed=True),
-    db: Session = Depends(get_db)
-):
-    # Get user preferences
-    user = crud.get_user(db, user_id)
-    if user is None:
-        raise HTTPException(status_code=404, detail="User not found")
-    
-    # Parse user interests
-    interests = json.loads(user.interests)
-    
-    # Calculate complexity based on reading level
-    complexity = {
-        "advanced": 100,
-        "intermediate": 50,
-        "beginner": 25
-    }.get(user.reading_level, 25)
+class ChatRequest(BaseModel):
+    message: str = Field(..., description="The message from the user")
+    session_id: str = Field(..., description="The unique session identifier")
+    interests: Dict[str, int] = Field(..., description="The user's interests")
+    complexity: int = Field(..., description="The user's reading level")
+    language: str = Field(..., description="The user's language")
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "message": "Tell me about this exhibit",
+                "session_id": "123e4567-e89b-12d3-a456-426614174000",
+                "interests": {"science": 50, "history": 50},
+                "complexity": 50,
+                "language": "en"
+            }
+        }
+
+@router.post("/chat")
+async def chat_with_exhibit(
+    chat_request: ChatRequest
+) -> Dict[str, Any]:
+    print(f"Received request: {chat_request}")  # Debug logging
     
     # Get or create chat session
-    chat_manager.get_or_create_session(
-        session_id=session_id,
-        interests=interests,
-        complexity=complexity
+    session = chat_manager.get_or_create_session(
+        session_id=chat_request.session_id,
+        interests=chat_request.interests,
+        complexity=chat_request.complexity
     )
     
     # Get response from chat manager
     try:
         response = chat_manager.chat(
-            session_id=session_id,
-            user_input=message,
-            language=user.language
+            session_id=chat_request.session_id,
+            user_input=chat_request.message,
+            language=chat_request.language
         )
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
     
-    return {"response": response}
+    return {
+        "response": response,
+        "session": session
+    }

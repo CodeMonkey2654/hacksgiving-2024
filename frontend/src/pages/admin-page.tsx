@@ -100,13 +100,7 @@ export default function AdminPage() {
         description: '',
         image: '',
         topic_id: '',
-        details: {
-          elementary: '',
-          'middle-school': '',
-          'high-school': '',
-          college: '',
-          expert: ''
-        }
+        details: ''
       })
       setEditingId(null)
     }
@@ -199,6 +193,10 @@ export default function AdminPage() {
                   </Button>
                 </Stack>
   
+                <Typography variant="h6" sx={{ color: 'var(--text-color)', mt: 4, mb: 2 }}>
+                  Existing Topics
+                </Typography>
+
                 <List>
                   {topics.map((topic: Topic) => (
                     <ListItem 
@@ -282,33 +280,25 @@ export default function AdminPage() {
                       label: { color: 'var(--text-color)' } 
                     }}
                   />
-                  <Typography variant="h6" sx={{ color: 'var(--text-color)', mt: 2 }}>
-                    Details by Education Level
-                  </Typography>
-                  {Object.entries(newExhibit.details).map(([level, content]) => (
-                    <TextField
-                      key={level}
-                      label={level.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-                      value={content}
-                      onChange={(e) => setNewExhibit({
-                        ...newExhibit,
-                        details: {
-                          ...newExhibit.details,
-                          [level]: e.target.value
-                        }
-                      })}
-                      multiline
-                      rows={2}
-                      sx={{ 
-                        textarea: { color: 'var(--text-color)' }, 
-                        label: { color: 'var(--text-color)' } 
-                      }}
-                    />
-                  ))}
+                  <TextField
+                    label="Details"
+                    value={newExhibit.details}
+                    onChange={(e) => setNewExhibit({...newExhibit, details: e.target.value})}
+                    multiline
+                    rows={4}
+                    sx={{ 
+                      textarea: { color: 'var(--text-color)' }, 
+                      label: { color: 'var(--text-color)' } 
+                    }}
+                  />
                   <Button variant="contained" onClick={handleSaveExhibit}>
                     {editingId ? 'Update Exhibit' : 'Add Exhibit'}
                   </Button>
                 </Stack>
+
+                <Typography variant="h6" sx={{ color: 'var(--text-color)', mt: 4, mb: 2 }}>
+                  Existing Exhibits
+                </Typography>
   
                 <List>
                   {exhibits.map((exhibit: Exhibit) => (

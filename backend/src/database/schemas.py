@@ -48,14 +48,15 @@ class User(UserBase):
 
 class VisitBase(BaseModel):
     user_id: str
-    exhibit_id: str
+    session_id: str
+    page_path: str
+    timestamp: datetime
 
 class VisitCreate(VisitBase):
     pass
 
 class Visit(VisitBase):
     id: int
-    timestamp: str
-    
+
     class Config:
-        from_attributes = True 
+        from_attributes = True
