@@ -1,9 +1,14 @@
 import { AppBar, Toolbar, Button, Box } from '@mui/material';
 import { Link } from '@tanstack/react-router';
 import ThemeToggle from './ThemeToggle.tsx';
-import LanguageSelector from '../components/LanguageSelector'; // Import LanguageSelector
+import LanguageSelector from '../components/LanguageSelector'; 
+import HomeIconLight from '../assets/aha_light.svg';
+import HomeIconDark from '../assets/aha_dark.svg';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Navbar = () => {
+  const { isDarkMode } = useTheme();
+
   return (
     <AppBar
       position="sticky"
@@ -17,20 +22,26 @@ const Navbar = () => {
     >
       <Toolbar>
         {/* Home Button */}
-        <Button
-          component={Link}
-          variant="contained"
+        <Link
           to="/"
-          sx={{
-            textColor: 'var(--text-color)',
-            color: 'var(--secondary)',
-            '&:hover': {
-              background: 'var(--hover-bg)',
-            },
+          style={{
+            display: 'inline-block',
+            color: 'var(--text-color)',
+            textDecoration: 'none',
           }}
         >
-          Home
-        </Button>
+          <img
+            src={isDarkMode ? HomeIconDark : HomeIconLight}
+            alt="Home"
+            style={{
+              width: '100px',
+              height: '32px',
+              transition: 'transform 0.2s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.06)')}
+            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+          />
+        </Link>
 
         <Box sx={{ flexGrow: 1 }} />
 
