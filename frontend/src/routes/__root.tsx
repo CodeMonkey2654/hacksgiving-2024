@@ -16,7 +16,7 @@ export const Route = createRootRoute({
     return (
       <SessionContext.Provider value={{ userId, sessionId }}>
         <Navbar />
-        <Box sx={{ pt: 3 }}>
+        <Box sx={{ pt: 2 }}>
           <Outlet />
         </Box>
       </SessionContext.Provider>

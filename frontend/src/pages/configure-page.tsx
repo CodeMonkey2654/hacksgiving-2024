@@ -36,7 +36,7 @@ export default function ConfigurePage() {
   return (
     <Box
       sx={{
-        minHeight: '100vh',
+        minHeight: '90vh',
         background: 'var(--background-gradient)',
         padding: 4,
       }}

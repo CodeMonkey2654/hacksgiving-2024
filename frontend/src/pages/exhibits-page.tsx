@@ -5,7 +5,7 @@ import ExhibitCard from '../components/ExhibitCard'
 import FeedbackForm from '../components/FeedbackForm'
 import { Link } from '@tanstack/react-router'
 import { useExhibits } from '../api/queries';
-import LoadingSpinner from '../components/LoadingSpinner';
+import CogSpinner from '../components/CogSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 
 export default function ExhibitsPage() {
@@ -14,7 +14,7 @@ export default function ExhibitsPage() {
   const [rating, setRating] = useState<number | null>(null);
   const [feedback, setFeedback] = useState('');
 
-  if (isLoading) return <LoadingSpinner />;
+  if (isLoading) return <CogSpinner />;
   if (error) return <ErrorMessage error={error} />;
 
   const handleSubmitFeedback = () => {
