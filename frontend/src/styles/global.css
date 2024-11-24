@@ -17,6 +17,9 @@
   --hover-bg: rgba(235, 84, 140, 0.1);
   --card-bg: rgba(255, 255, 255, 0.95);
   --backdrop-bg: rgba(255, 255, 255, 0.8);
+  --cog-1-filter: hue-rotate(0deg) saturate(100) brightness(0.0);
+  --cog-2-filter: hue-rotate(120deg) saturate(0) brightness(0.6);
+  --cog-3-filter: hue-rotate(240deg) saturate(0) brightness(0.3);
 }
 
 :root[data-theme='dark'] {
@@ -28,6 +31,9 @@
   --hover-bg: rgba(235, 84, 140, 0.1);
   --card-bg: rgba(28, 27, 76, 0.8);
   --backdrop-bg: rgba(28, 27, 76, 0.8);
+  --cog-1-filter: hue-rotate(0deg);
+  --cog-2-filter: hue-rotate(120deg);
+  --cog-3-filter: hue-rotate(240deg);
 }
 
 html,
@@ -162,4 +168,80 @@ body,
 
 .MuiContainer-root {
   background-color: transparent;
+}
+
+@keyframes rotate-top {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.loader {
+  position: relative  ;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 130px;
+}
+
+.cog-top {
+  transform: translate(-35px, -2px);
+}
+
+.loader_cogs_top {
+  width: 50px;
+  height: 50px;
+  animation: rotate-top 7s linear infinite;
+  position: absolute;
+  filter: var(--cog-1-filter);
+}
+
+@keyframes rotate-left {
+  0% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(385deg);
+  }
+}
+
+.cog-left {
+  transform: translate(5px, 25px);
+} 
+
+.loader_cogs_left {
+  width: 50px;
+  height: 50px;
+  animation: rotate-left 7s linear infinite;
+  animation-direction: reverse;
+  position: absolute;
+  filter: var(--cog-2-filter);
+}
+
+@keyframes rotate-bottom {
+  0% {
+    transform: rotate(17deg);
+  }
+  100% {
+    transform: rotate(377deg);
+  }
+}
+
+.cog-bottom {
+  transform: translate(-5px, -40px);
+} 
+
+.loader_cogs_bottom {
+  width: 50px;
+  height: 50px;
+  animation: rotate-bottom 7s linear infinite;
+  animation-direction: reverse;
+  position: absolute;
+  filter: var(--cog-3-filter);
 }
