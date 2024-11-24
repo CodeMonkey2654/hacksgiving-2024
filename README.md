@@ -12,7 +12,7 @@ bun install
 To run the frontend in dev mode run:
 
 ```bash
-bun dev
+bun run dev
 ```
 
 ## Running the backend
