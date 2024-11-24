@@ -1,19 +1,48 @@
-import { Paper, Typography, Stack, Button } from '@mui/material';
+import { Paper, Typography, Stack, Button, Fade, Box } from '@mui/material';
 import { Link } from '@tanstack/react-router';
 import RecommendedExhibit from './RecommendedExhibit';
+import { useRecommendations } from '../api/queries';
+import CogSpinner from './CogSpinner';
 
-interface Exhibit {
-  id: string;
-  image: string;
-  title: string;
-  description: string;
-}
 
 interface RecommendedExhibitsProps {
-  exhibits: Exhibit[];
+  userId: string;
 }
 
-const RecommendedExhibits: React.FC<RecommendedExhibitsProps> = ({ exhibits }) => (
+const RecommendedExhibits: React.FC<RecommendedExhibitsProps> = ({ userId }) => {
+  const { data: recommendedExhibits, isLoading: isRecommendationsLoading } = useRecommendations(userId || '') 
+  if (isRecommendationsLoading) {
+    return (
+      <Box 
+        sx={{ 
+          height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'var(--background-gradient)'
+        }}
+      >
+        <Fade in={true}>
+          <Box sx={{ textAlign: 'center' }}>
+            <CogSpinner />
+            <Typography
+              variant="h5"
+              sx={{
+                color: 'var(--text-color)',
+                fontWeight: 500,
+                mt: 3
+              }}
+            >
+              Preparing Your Exhibition Experience...
+            </Typography>
+          </Box>
+        </Fade>
+      </Box>
+    )
+  } 
+  if (!recommendedExhibits) return null
+  return (
   <Paper
     sx={{
       p: 3,
@@ -28,8 +57,11 @@ const RecommendedExhibits: React.FC<RecommendedExhibitsProps> = ({ exhibits }) =
       Recommended Exhibits
     </Typography>
     <Stack spacing={2}>
-      {exhibits.map((exhibit) => (
-        <RecommendedExhibit key={exhibit.id} exhibit={exhibit} />
+      {recommendedExhibits.map((exhibit) => (
+        <RecommendedExhibit 
+          key={exhibit.exhibit_id} 
+          exhibit={exhibit}
+        />
       ))}
     </Stack>
     <Button
@@ -50,7 +82,8 @@ const RecommendedExhibits: React.FC<RecommendedExhibitsProps> = ({ exhibits }) =
     >
       See All Exhibits
     </Button>
-  </Paper>
-);
+    </Paper>
+  )
+}
 
 export default RecommendedExhibits;

@@ -1,9 +1,11 @@
-import { Paper } from '@mui/material';
+import { Paper, Box, Typography, Fade } from '@mui/material';
 import GradientTypography from './GradientTypography';
 import ReactMarkdown from 'react-markdown';
+import { useExhibit, useExhibitDescription } from '../api/queries';
+import CogSpinner from './CogSpinner';
 
 interface Exhibit {
-  id: number;
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -15,7 +17,47 @@ interface ExhibitDetailsProps {
   exhibit: Exhibit;
 }
 
-const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => (
+const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => {
+  const { data: exhibitDescription, isLoading: isDescriptionLoading } = useExhibitDescription(exhibit.id);
+  if (isDescriptionLoading) {
+    return (
+      <Box 
+        sx={{ 
+          height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'var(--background-gradient)'
+        }}
+      >
+        <Fade in={true}>
+          <Box sx={{ textAlign: 'center' }}>
+            <CogSpinner />
+            <Typography
+              variant="h5"
+              sx={{
+                color: 'var(--text-color)',
+                fontWeight: 500,
+                mt: 3
+              }}
+            >
+              Preparing Your Exhibition Experience...
+            </Typography>
+          </Box>
+        </Fade>
+      </Box>
+    )
+  }
+  if (!exhibit || !exhibitDescription) {
+    return null;
+  }
+  const enrichedExhibit = {
+    ...exhibit,
+    details: exhibitDescription.description
+  }
+
+  return (
   <Paper
     elevation={24}
     sx={{
@@ -29,9 +71,9 @@ const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => (
     }}
   >
     <div style={{ fontSize: '64px', textAlign: 'center', marginBottom: '16px' }}>
-      {exhibit.image}
+      {enrichedExhibit.image}
     </div>
-    <GradientTypography>{exhibit.title}</GradientTypography>
+    <GradientTypography>{enrichedExhibit.title}</GradientTypography>
     <div
       style={{
         color: '#C084FC',
@@ -41,7 +83,7 @@ const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => (
         letterSpacing: '0.02em',
       }}
     >
-      {exhibit.category}
+      {enrichedExhibit.category}
     </div>
     <div
       style={{
@@ -110,10 +152,11 @@ const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => (
           ),
         }}
       >
-        {exhibit.details}
+        {enrichedExhibit.details}
       </ReactMarkdown>
     </div>
-  </Paper>
-);
+    </Paper>
+  )
+}
 
 export default ExhibitDetails;

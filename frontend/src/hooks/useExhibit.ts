@@ -7,11 +7,12 @@ interface Exhibit {
   description: string;
   image_url: string;
   topic: string[];
+  score?: number;
 }
 
 interface UserPreferences {
-  interests: string[];
-  experience_level: string;
+  interests: Record<string, number>;
+  visited_exhibits?: string[];
 }
 
 export const useFetchExhibits = (preferences: UserPreferences) => {

@@ -123,7 +123,7 @@ export const useUser = (id: string) => {
 export const useCreateUser = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: (user: UserCreate) => apiClient.post('/users', user),
+    mutationFn: (user) => apiClient.post('/users', user),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['users'] });
     }

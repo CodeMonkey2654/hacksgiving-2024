@@ -60,10 +60,13 @@ def get_exhibit(db: Session, exhibit_id: str):
             exhibit.details = {}
     return exhibit
 
+def get_exhibit_by_title(db: Session, title: str):
+    return db.query(Exhibit).filter(Exhibit.title == title).first()
+
 def create_exhibit(db: Session, exhibit: ExhibitCreate):
     details_json = json.dumps(exhibit.details) if exhibit.details else "{}"
     db_exhibit = Exhibit(
-        id=str(uuid.uuid4()),
+        id=exhibit.id if exhibit.id else str(uuid.uuid4()),
         title=exhibit.title,
         description=exhibit.description,
         image=exhibit.image,
@@ -131,6 +134,9 @@ def create_user(db: Session, user: UserCreate):
     db.commit()
     db.refresh(db_user)
     return db_user
+
+def get_user_visits(db: Session, user_id: str):
+    return db.query(Visit).filter(Visit.user_id == user_id).all()
 
 def update_user(db: Session, user_id: str, user: UserCreate):
     db_user = db.query(User).filter(User.id == user_id).first()

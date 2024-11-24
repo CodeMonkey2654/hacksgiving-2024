@@ -55,7 +55,8 @@ Using the chat history provided, generate a natural response that:
 
 Current query: {query}
 
-Generate a conversational response that naturally incorporates the relevant information."""
+Generate a conversational response that naturally incorporates the relevant information. Make sure that you tailor your response to what the user is asking. 
+Your introduction to the user should be similar but not exactly 'how can I help you?'"""
 
 class ExhibitEnhancementAgent:
     def __init__(self):
@@ -101,7 +102,8 @@ Given the following exhibit description, enhance it by:
 Original description:
 {description}
 
-Provide an enhanced description that maintains factual accuracy while being more engaging and tailored to the interests and complexity level specified."""
+Provide an enhanced description, but should be short and to the point fun facts (no more than 2 sentences). 
+Give a few fun facts that are tailored to the interests and complexity level specified."""
 
 class FactCheckingAgent:
     def __init__(self):

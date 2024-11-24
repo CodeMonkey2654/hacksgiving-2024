@@ -25,9 +25,3 @@ def get_user_visits(
 ):
     return crud.get_user_visits(db, user_id)
 
-@router.get("/sessions/{session_id}")
-def get_session_visits(
-    session_id: str,
-    db: Session = Depends(get_db)
-):
-    return crud.get_session_visits(db, session_id)

@@ -1,23 +1,21 @@
 import { Paper, Typography, Stack, Rating, TextField, Button } from '@mui/material';
+import { useState } from 'react';
 
-interface FeedbackSectionProps {
-  rating: number | null;
-  setRating: (value: number | null) => void;
-  feedback: string;
-  setFeedback: (value: string) => void;
-  handleSubmitFeedback: () => void;
-}
+const FeedbackSection: React.FC = () => {
+  const [rating, setRating] = useState<number | null>(null);
+  const [feedback, setFeedback] = useState('');
 
-const FeedbackSection: React.FC<FeedbackSectionProps> = ({
-  rating,
-  setRating,
-  feedback,
-  setFeedback,
-  handleSubmitFeedback
-}) => (
+  const handleSubmitFeedback = () => {
+    console.log({ rating, feedback });
+    setRating(null);
+    setFeedback('');
+  };
+  
+  return (
   <Paper
     sx={{
       p: 3,
+      mt: 2,
       background: 'rgba(255, 255, 255, 0.05)',
       backdropFilter: 'blur(10px)', 
       borderRadius: 4,
@@ -56,7 +54,8 @@ const FeedbackSection: React.FC<FeedbackSectionProps> = ({
         Submit Feedback
       </Button>
     </Stack>
-  </Paper>
-);
+    </Paper>
+  );
+};
 
 export default FeedbackSection;

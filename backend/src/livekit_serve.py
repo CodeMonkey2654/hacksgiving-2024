@@ -3,7 +3,6 @@ from __future__ import annotations
 import logging
 from dotenv import load_dotenv
 from typing import Annotated
-import datetime
 from livekit import rtc
 from livekit.agents import (
     AutoSubscribe,
@@ -14,22 +13,21 @@ from livekit.agents import (
 )
 from livekit.agents.multimodal import MultimodalAgent
 from livekit.plugins import openai
+from database.crud import get_exhibit_by_title
 
-
-
-
-load_dotenv(dotenv_path=".env")
+load_dotenv(dotenv_path="../.env")
 logger = logging.getLogger("my-worker")
 logger.setLevel(logging.INFO)
 
-class DefaultAssistant(llm.FunctionContext):
+class ExhibitAssistant(llm.FunctionContext):
     @llm.ai_callable()
     async def search(
         self,
-        exhibit_id: Annotated[str, llm.TypeInfo(description="The id of the exhibit to search for")],
+        exhibit_title: Annotated[str, llm.TypeInfo(description="The title of the exhibit to search for")],
     ):
-        """Transcribe conversation text to console"""
-        return "Continue conversation with the user"
+        """This is a function that will search for an exhibit by title and return the details of the exhibit"""
+        exhibit = get_exhibit_by_title(exhibit_title)
+        return exhibit.details
 
 async def entrypoint(ctx: JobContext):
     logger.info(f"connecting to room {ctx.room.name}")
@@ -61,10 +59,12 @@ def run_multimodal_agent(ctx: JobContext, participant: rtc.RemoteParticipant):
             "or cool connection to spark their curiosity. Offer to answer questions and suggest other awesome exhibits they "
             "might love, bringing that same energetic and engaging style to every interaction, no matter what language you're "
             "speaking in."
+            "You are also able to search for exhibits by title using the search function called 'search' where you can pass in the title of the exhibit as a parameter."
         ),
         modalities=["audio", "text"],
     )
-    assistant = MultimodalAgent(model=model)
+    fnc_ctx = ExhibitAssistant()
+    assistant = MultimodalAgent(model=model, fnc_ctx=fnc_ctx)
     assistant.start(ctx.room, participant)
 
     session = model.sessions[0]

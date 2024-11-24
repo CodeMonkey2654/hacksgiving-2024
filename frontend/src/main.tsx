@@ -9,6 +9,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './styles/global.css';
 import { routeTree } from './routeTree.gen';
+import { UserProvider } from './contexts/UserContext';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,9 +34,11 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider>
-          <RouterProvider router={router} />
-        </ThemeProvider>
+        <UserProvider>
+          <ThemeProvider>
+            <RouterProvider router={router} />
+          </ThemeProvider>
+        </UserProvider>
       </QueryClientProvider>
     </StrictMode>
   );

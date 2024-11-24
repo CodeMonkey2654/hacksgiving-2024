@@ -9,26 +9,47 @@ interface Message {
 }
 
 interface ChatWindowProps {
-  messages: Message[];
-  newMessage: string;
-  setNewMessage: (message: string) => void;
-  handleSendMessage: () => void;
-  complexity: number;
-  interests: Record<string, number>;
-  language: string;
+  sessionId: string;
+  exhibit: Exhibit;
 }
 
 const ChatWindow = ({ 
-  messages, 
-  newMessage, 
-  setNewMessage, 
-  handleSendMessage,
-  complexity,
-  interests,
-  language
+  sessionId,
+  exhibit,
 }: ChatWindowProps) => {
   const chatMutation = useChatWithExhibit();
+  const [messages, setMessages] = useState([
+    {
+      text: exhibit ? `Welcome to the ${exhibit.title} exhibit! I'm Dr. Sarah, your guide. I'll explain everything at a high school level by default, but you can adjust the complexity using the slider above. What would you like to know about ${exhibit.title.toLowerCase()}?` : '',
+      isBot: true,
+    },
+  ])
+  const [newMessage, setNewMessage] = useState('')
+  const topicInterests = localStorage.getItem('topicInterests')
+  const complexity = localStorage.getItem('complexity')
+  const handleSendMessage = async () => {
+    if (!newMessage.trim()) return;
 
+    setMessages([...messages, { text: newMessage, isBot: false }]);
+    setNewMessage('');
+
+    try {
+      const response = await chatMutation.mutateAsync({
+        message: newMessage,
+        sessionId: sessionId,
+        interests: topicInterests ? JSON.parse(topicInterests) : {},
+        complexity: complexity ? parseInt(complexity) : 50,
+        language: localStorage.getItem('language') || 'en'
+      });
+
+      setMessages(prev => [...prev, {
+        text: response.data.response,
+        isBot: true
+      }]);
+    } catch (error) {
+      console.error('Failed to send message:', error);
+    }
+  };
   return (
     <Paper
       sx={{

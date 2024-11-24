@@ -18,7 +18,7 @@ const StartJourneyButton: React.FC = () => (
       },
       transition: 'all 0.3s ease'
     }}
-    href="/exhibit/1"
+    href="/exhibit/exhibit_11"
   >
     Start Your Journey
   </Button>

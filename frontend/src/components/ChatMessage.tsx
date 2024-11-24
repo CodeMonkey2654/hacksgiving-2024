@@ -1,3 +1,4 @@
+import React from 'react';
 import { Stack, Paper, Avatar, Typography, List, ListItem } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 import '../styles/global.css';
@@ -7,8 +8,16 @@ interface Message {
   isBot: boolean;
 }
 
-const ChatMessage = ({ message }: { message: Message }) => (
+const ChatMessage = ({ message }: { message: Message }) => {
+  // Scroll to this message when it's added
+  React.useEffect(() => {
+    const messageElement = document.getElementById(`message-${message.text}`);
+    messageElement?.scrollIntoView({ behavior: 'smooth' });
+  }, [message]);
+
+  return (
     <Stack
+      id={`message-${message.text}`}
       direction="row" 
       spacing={2}
       sx={{ mb: 2, justifyContent: message.isBot ? 'flex-start' : 'flex-end' }}
@@ -27,22 +36,52 @@ const ChatMessage = ({ message }: { message: Message }) => (
         <ReactMarkdown
           components={{
             p: ({ children }) => (
-              <Typography sx={{ my: 0.5 }}>
+              <Typography 
+                sx={{ 
+                  my: 0.5,
+                  fontFamily: '"Roboto", sans-serif',
+                  fontSize: '1rem',
+                  lineHeight: 1.6
+                }}
+              >
                 {children}
               </Typography>
             ),
             h1: ({ children }) => (
-              <Typography variant="h4" sx={{ my: 0.5 }}>
+              <Typography 
+                variant="h4" 
+                sx={{ 
+                  my: 0.5,
+                  fontFamily: '"Roboto", sans-serif',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em'
+                }}
+              >
                 {children}
               </Typography>
             ),
             h2: ({ children }) => (
-              <Typography variant="h5" sx={{ my: 0.5 }}>
+              <Typography 
+                variant="h5" 
+                sx={{ 
+                  my: 0.5,
+                  fontFamily: '"Roboto", sans-serif', 
+                  fontWeight: 600,
+                  letterSpacing: '-0.01em'
+                }}
+              >
                 {children}
               </Typography>
             ),
             h3: ({ children }) => (
-              <Typography variant="h6" sx={{ my: 0.5 }}>
+              <Typography 
+                variant="h6" 
+                sx={{ 
+                  my: 0.5,
+                  fontFamily: '"Roboto", sans-serif',
+                  fontWeight: 600
+                }}
+              >
                 {children}
               </Typography>
             ),
@@ -53,6 +92,10 @@ const ChatMessage = ({ message }: { message: Message }) => (
                 listStyleType: 'disc',
                 '& .MuiListItem-root': {
                   display: 'list-item',
+                  fontFamily: '"Roboto", sans-serif',
+                  fontSize: '1rem',
+                  lineHeight: 1.6,
+                  color: 'inherit'
                 }
               }}>
                 {children}
@@ -65,6 +108,10 @@ const ChatMessage = ({ message }: { message: Message }) => (
                 listStyleType: 'decimal',
                 '& .MuiListItem-root': {
                   display: 'list-item',
+                  fontFamily: '"Roboto", sans-serif',
+                  fontSize: '1rem',
+                  lineHeight: 1.6,
+                  color: 'inherit'
                 }
               }}>
                 {children}
@@ -81,6 +128,7 @@ const ChatMessage = ({ message }: { message: Message }) => (
         </ReactMarkdown>
       </Paper>
     </Stack>
-)
+  );
+}
 
 export default ChatMessage;
