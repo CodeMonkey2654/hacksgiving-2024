@@ -7,11 +7,19 @@ export const SESSION_ID_KEY = 'session_id';
 export function useUserManagement() {
   const createUser = useCreateUser();
   const { data: topics = [] } = useTopics()
-  const initialTopicInterests = topics.reduce((acc: Record<string, number>, topic: any) => {
-    acc[topic.id] = 50;
-    return acc;
-  }, {});
-  localStorage.setItem('topicInterests', JSON.stringify(initialTopicInterests));
+  
+  let initialTopicInterests = {};
+  const existingInterests = localStorage.getItem('topicInterests');
+  
+  if (existingInterests) {
+    initialTopicInterests = JSON.parse(existingInterests);
+  } else {
+    initialTopicInterests = topics.reduce((acc: Record<string, number>, topic: any) => {
+      acc[topic.id] = 50;
+      return acc;
+    }, {});
+    localStorage.setItem('topicInterests', JSON.stringify(initialTopicInterests));
+  }
   
   const initializeUser = async () => {
     // Check for existing user ID

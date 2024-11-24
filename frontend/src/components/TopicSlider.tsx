@@ -1,7 +1,7 @@
 import { Box, Stack, Typography, Slider } from '@mui/material';
 
 interface Topic {
-  id: 'physics' | 'chemistry' | 'biology' | 'astronomy';
+  id: string;
   label: string;
   icon: string;
   color: string;

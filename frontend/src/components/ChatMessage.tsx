@@ -9,11 +9,6 @@ interface Message {
 }
 
 const ChatMessage = ({ message }: { message: Message }) => {
-  // Scroll to this message when it's added
-  React.useEffect(() => {
-    const messageElement = document.getElementById(`message-${message.text}`);
-    messageElement?.scrollIntoView({ behavior: 'smooth' });
-  }, [message]);
 
   return (
     <Stack
@@ -23,7 +18,7 @@ const ChatMessage = ({ message }: { message: Message }) => {
       sx={{ mb: 2, justifyContent: message.isBot ? 'flex-start' : 'flex-end' }}
     >
       {message.isBot && (
-        <Avatar sx={{ bgcolor: '#C084FC' }}>DR</Avatar>
+        <Avatar sx={{ bgcolor: '#C084FC' }}>AL</Avatar>
       )}
       <Paper
         sx={{

@@ -39,7 +39,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       spacing={2}
       alignItems={isMobile ? 'flex-start' : 'center'}
     >
-      <IconButton sx={{ background: bgColor, '&:hover': { background: hoverBgColor } }}>
+      <IconButton sx={{ background: bgColor, pointerEvents: 'none', '&:hover': { background: hoverBgColor } }}>
         {icon}
       </IconButton>
       <Box>

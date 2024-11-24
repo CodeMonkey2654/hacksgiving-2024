@@ -48,7 +48,7 @@ const LanguageSelector: React.FC = () => {
             '& fieldset': { borderColor: 'rgba(255, 255, 255, 0.3)' },
             '&:hover fieldset': { borderColor: 'rgba(255, 255, 255, 0.5)' },
           },
-          '& .MuiSelect-icon': { color: 'var(--text-color)' },
+          '& .MuiSelect-icon': { color: 'var(--text-color)' }
         }}
       >
         <Select

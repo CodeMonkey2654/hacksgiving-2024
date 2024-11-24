@@ -3,6 +3,7 @@ import { Settings, Explore } from '@mui/icons-material'
 import { useState, useEffect } from 'react'
 import { useMediaQuery, useTheme } from '@mui/material'
 import FeatureCard from '../components/FeatureCard'
+import discoveryWorldLogo from '../assets/discovery_world.svg'
 
 
 export default function HomePage() {
@@ -57,6 +58,18 @@ export default function HomePage() {
             overflow: 'hidden',
           }}
         >
+          <Box
+            component="img"
+            src={discoveryWorldLogo}
+            alt="Discovery World Logo"
+            sx={{
+              width: '120px',
+              height: '120px',
+              display: 'block',
+              margin: '0 auto',
+              mb: 2
+            }}
+          />
           <Typography
             variant={isMobile ? 'h3' : 'h2'}
             sx={{

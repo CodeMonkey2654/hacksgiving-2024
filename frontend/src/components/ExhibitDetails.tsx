@@ -1,8 +1,10 @@
-import { Paper, Box, Typography, Fade } from '@mui/material';
+import { Paper,  IconButton } from '@mui/material';
 import GradientTypography from './GradientTypography';
 import ReactMarkdown from 'react-markdown';
-import { useExhibit, useExhibitDescription } from '../api/queries';
-import CogSpinner from './CogSpinner';
+import { useExhibitDescription } from '../api/queries';
+import { Refresh } from '@mui/icons-material';
+import { useState } from 'react';
+import LoadingScreen from './LoadingScreen';
 
 interface Exhibit {
   id: string;
@@ -18,36 +20,17 @@ interface ExhibitDetailsProps {
 }
 
 const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => {
-  const { data: exhibitDescription, isLoading: isDescriptionLoading } = useExhibitDescription(exhibit.id);
-  if (isDescriptionLoading) {
-    return (
-      <Box 
-        sx={{ 
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: 'var(--background-gradient)'
-        }}
-      >
-        <Fade in={true}>
-          <Box sx={{ textAlign: 'center' }}>
-            <CogSpinner />
-            <Typography
-              variant="h5"
-              sx={{
-                color: 'var(--text-color)',
-                fontWeight: 500,
-                mt: 3
-              }}
-            >
-              Preparing Your Exhibition Experience...
-            </Typography>
-          </Box>
-        </Fade>
-      </Box>
-    )
+  const { data: exhibitDescription, isLoading: isDescriptionLoading, refetch } = useExhibitDescription(exhibit.id);
+  const [isRefetching, setIsRefetching] = useState(false);
+  
+  const handleRefetch = async () => {
+    setIsRefetching(true);
+    await refetch();
+    setIsRefetching(false);
+  };
+
+  if (isDescriptionLoading || isRefetching) {
+    return <LoadingScreen />
   }
   if (!exhibit || !exhibitDescription) {
     return null;
@@ -68,8 +51,20 @@ const ExhibitDetails: React.FC<ExhibitDetailsProps> = ({ exhibit }) => {
       border: '1px solid var(--paper-border)',
       boxShadow: '0 0 40px rgba(138, 43, 226, 0.2)',
       fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      position: 'relative'
     }}
   >
+    <IconButton 
+      onClick={handleRefetch}
+      sx={{ 
+        position: 'absolute',
+        top: 16,
+        right: 16,
+        color: 'var(--text-color)'
+      }}
+    >
+      <Refresh />
+    </IconButton>
     <div style={{ fontSize: '64px', textAlign: 'center', marginBottom: '16px' }}>
       {enrichedExhibit.image}
     </div>

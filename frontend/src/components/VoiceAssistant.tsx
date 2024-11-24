@@ -10,10 +10,13 @@ import { useEffect, useState } from "react";
 import { AccessToken } from 'livekit-server-sdk';
 import { Box, IconButton, Typography } from '@mui/material';
 import MicIcon from '@mui/icons-material/Mic';
+import dotenv from 'dotenv';
 
-const LIVEKIT_API_KEY = 'APIPdt7brNQ5fhi';
-const LIVEKIT_API_SECRET = 'VtgAfVCvldWCMlKkcBPvZcOf0sO0AiGppu9MGzjCnZU';
-const LIVEKIT_URL = 'wss://hackathon-f4yb1eyf.livekit.cloud';
+dotenv.config();
+
+const LIVEKIT_API_KEY = process.env.REACT_APP_LIVEKIT_API_KEY;
+const LIVEKIT_API_SECRET = process.env.REACT_APP_LIVEKIT_API_SECRET;
+const LIVEKIT_URL = process.env.REACT_APP_LIVEKIT_URL;
 
 
 function SimpleVoiceAssistant() {
@@ -27,13 +30,17 @@ function VoiceAssistant() {
 
   const generateToken = async () => {
     try {
-      const roomName = 'voice-assistant-room';
+      // Generate a new room name with timestamp to ensure uniqueness
+      const language = localStorage.getItem('language') || 'en';
+      const complexity = localStorage.getItem('complexity') || '0';
+      const top_interest = Object.entries(JSON.parse(localStorage.getItem('topicInterests') || '{}')).sort((a,b) => b[1] - a[1])[0]?.[0] || '';
+      const newRoomName = `${language}__${complexity}__${top_interest}__${Date.now()}`;
       const participantName = 'user-' + Math.random().toString(36).substring(7);
 
       const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
         identity: participantName,
       });
-      at.addGrant({ roomJoin: true, room: roomName });
+      at.addGrant({ roomJoin: true, room: newRoomName });
 
       const token = await at.toJwt();
       setToken(token);
@@ -42,19 +49,15 @@ function VoiceAssistant() {
     }
   };
 
-  const handleConnect = () => {
+  const handleConnect = async () => {
     if (!connected) {
-      generateToken();
+      await generateToken();
       setConnected(true);
     } else {
-      setToken("");
+      setToken(null);
       setConnected(false);
     }
   };
-
-  useEffect(() => {
-    generateToken();
-  }, []);
 
   return (
     <Box

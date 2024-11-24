@@ -19,12 +19,10 @@ const ComplexityControl: React.FC = () => {
         background: 'rgba(255, 255, 255, 0.05)',
         backdropFilter: 'blur(10px)', 
         borderRadius: 4,
-        border: '1px solid rgba(255, 255, 255, 0.1)'
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        mb: 2
       }}
     >
-      <Typography sx={{ color: 'rgba(255, 255, 255, 0.7)', mb: 1 }}>
-        Complexity Level
-      </Typography>
       <Box sx={{ width: '100%' }}>
         <ComplexitySlider
           complexity={complexity}

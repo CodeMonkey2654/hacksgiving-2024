@@ -1,8 +1,8 @@
-import { Paper, Typography, Stack, Button, Fade, Box } from '@mui/material';
+import { Paper, Typography, Stack, Button } from '@mui/material';
 import { Link } from '@tanstack/react-router';
 import RecommendedExhibit from './RecommendedExhibit';
 import { useRecommendations } from '../api/queries';
-import CogSpinner from './CogSpinner';
+import LoadingScreen from './LoadingScreen';
 
 
 interface RecommendedExhibitsProps {
@@ -12,34 +12,7 @@ interface RecommendedExhibitsProps {
 const RecommendedExhibits: React.FC<RecommendedExhibitsProps> = ({ userId }) => {
   const { data: recommendedExhibits, isLoading: isRecommendationsLoading } = useRecommendations(userId || '') 
   if (isRecommendationsLoading) {
-    return (
-      <Box 
-        sx={{ 
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: 'var(--background-gradient)'
-        }}
-      >
-        <Fade in={true}>
-          <Box sx={{ textAlign: 'center' }}>
-            <CogSpinner />
-            <Typography
-              variant="h5"
-              sx={{
-                color: 'var(--text-color)',
-                fontWeight: 500,
-                mt: 3
-              }}
-            >
-              Preparing Your Exhibition Experience...
-            </Typography>
-          </Box>
-        </Fade>
-      </Box>
-    )
+    return <LoadingScreen />
   } 
   if (!recommendedExhibits) return null
   return (

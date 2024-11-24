@@ -1,11 +1,12 @@
 import { Card, Stack, CardContent, CardActionArea, Typography, Box } from '@mui/material';
 import { Link } from '@tanstack/react-router';
 
-interface Exhibit {
-  image: string;
-  title: string;
-  description: string;
-}
+  interface Exhibit {
+    image: string;
+    title: string;
+    description: string;
+    id: string;
+  }
 
 interface RecommendedExhibitProps {
   exhibit: Exhibit;
@@ -18,7 +19,7 @@ const RecommendedExhibit: React.FC<RecommendedExhibitProps> = ({ exhibit }) => (
       backdropFilter: 'blur(10px)',
     }}
   >
-    <CardActionArea component={Link} to="/exhibits">
+    <CardActionArea component={Link} to={`/exhibit/${exhibit.id}`}>
       <CardContent>
         <Stack direction="row" spacing={2} alignItems="center">
           <Typography sx={{ fontSize: '2rem' }}>{exhibit.image}</Typography>

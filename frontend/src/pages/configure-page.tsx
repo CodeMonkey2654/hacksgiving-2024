@@ -5,33 +5,10 @@ import TopicSlider from '../components/TopicSlider'
 import GradientTypography from '../components/GradientTypography'
 import StartJourneyButton from '../components/StartJourneyButton'
 import { useTopics } from '../api/queries'
+import ComplexityControl from '../components/ComplexityControl'
+import TopicInterests from '../components/TopicInterests'
 
 export default function ConfigurePage() {
-  const { data: topics = [] } = useTopics();
-
-  const [complexity, setComplexity] = React.useState(() => {
-    return Number(localStorage.getItem('complexity')) || 50
-  });
-
-  const [topicInterests, setTopicInterests] = React.useState<Record<string, number>>(() => {
-    const savedInterests = localStorage.getItem('topicInterests')
-    return savedInterests ? JSON.parse(savedInterests) : {}
-  });
-
-  React.useEffect(() => {
-    localStorage.setItem('complexity', complexity.toString())
-  }, [complexity]);
-
-  React.useEffect(() => {
-    localStorage.setItem('topicInterests', JSON.stringify(topicInterests))
-  }, [topicInterests]);
-
-  const handleInterestChange = (topic: string, value: number) => {
-    setTopicInterests(prev => ({
-      ...prev,
-      [topic]: value
-    }));
-  };
 
   return (
     <Box
@@ -54,25 +31,8 @@ export default function ConfigurePage() {
           }}
         >
           <GradientTypography sx={{ mb: 4 }}>Configure Your Journey</GradientTypography>
-
-          <ComplexitySlider complexity={complexity} setComplexity={setComplexity} />
-
-          <Box>
-            <Typography variant="h6" sx={{ color: 'var(--text-color)', mb: 3 }}>
-              Topics of Interest
-            </Typography>
-            <Stack spacing={3}>
-              {topics.map(topic => (
-                <TopicSlider
-                  key={topic.id}
-                  topic={topic}
-                  value={topicInterests[topic.id] ?? 50}
-                  onChange={handleInterestChange}
-                />
-              ))}
-            </Stack>
-          </Box>
-
+          <ComplexityControl />
+          <TopicInterests />
           <StartJourneyButton />
         </Paper>
       </Container>

@@ -1,7 +1,8 @@
-import { Paper, Box, Stack, TextField, Button } from '@mui/material';
+import { Paper, Box, Stack, TextField, Button, Typography, Fade, CircularProgress } from '@mui/material';
 import ChatMessage from './ChatMessage';
 import { useChatWithExhibit } from '../api/queries';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import CogSpinner from './CogSpinner';
 
 interface Message {
   text: string;
@@ -17,16 +18,47 @@ const ChatWindow = ({
   sessionId,
   exhibit,
 }: ChatWindowProps) => {
+  const funFacts = [
+    "The human brain can store up to 2.5 petabytes of data!",
+    "Honey never spoils - archaeologists found 3000-year-old honey still edible!",
+    "A day on Venus is longer than its year!",
+    "Bananas are berries, but strawberries aren't!",
+    "Octopuses have three hearts!",
+    "A bolt of lightning is five times hotter than the sun's surface!",
+    "DNA is like a twisted ladder that could stretch to Pluto and back!",
+    "The first computer programmer was a woman - Ada Lovelace!",
+    "There are more possible chess games than atoms in the universe!",
+    "Quantum computers can theoretically process more calculations than atoms in the universe!"
+  ];
+
   const chatMutation = useChatWithExhibit();
+  const topicInterests = localStorage.getItem('topicInterests')
+  const complexity = localStorage.getItem('complexity')
+  const complexityLevels = {
+    0: "Elementary school",
+    25: "Middle school",
+    50: "High school",
+    75: "College",
+    100: "Graduate school",
+  }
   const [messages, setMessages] = useState([
     {
-      text: exhibit ? `Welcome to the ${exhibit.title} exhibit! I'm Dr. Sarah, your guide. I'll explain everything at a high school level by default, but you can adjust the complexity using the slider above. What would you like to know about ${exhibit.title.toLowerCase()}?` : '',
+      text: exhibit ? `Greetings! I am Ada Lovelace, the world's first computer programmer and your personal guide to the ${exhibit.title} exhibit. I'll be explaining concepts at a ${complexityLevels[parseInt(complexity || '50')]} level, which you can adjust using the slider above. What would you like to learn about ${exhibit.title.toLowerCase()}?` : '',
       isBot: true,
     },
   ])
   const [newMessage, setNewMessage] = useState('')
-  const topicInterests = localStorage.getItem('topicInterests')
-  const complexity = localStorage.getItem('complexity')
+  const [factIndex, setFactIndex] = useState(0);
+
+  useEffect(() => {
+    if (chatMutation.isPending) {
+      const interval = setInterval(() => {
+        setFactIndex(Math.floor(Math.random() * funFacts.length));
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [chatMutation.isPending]);
+
   const handleSendMessage = async () => {
     if (!newMessage.trim()) return;
 
@@ -67,6 +99,49 @@ const ChatWindow = ({
         {messages.map((message, index) => (
           <ChatMessage key={index} message={message} />
         ))}
+        {chatMutation.isPending && (
+          <Fade in={true} timeout={500}>
+            <Stack 
+              direction="row" 
+              spacing={2} 
+              sx={{ 
+                mb: 2,
+                justifyContent: 'flex-start',
+                alignItems: 'center'
+              }}
+            >
+              <Paper
+                elevation={3}
+                sx={{
+                  p: 2,
+                  maxWidth: '80%',
+                  background: 'rgba(192, 132, 252, 0.1)', 
+                  borderRadius: 2,
+                  backdropFilter: 'blur(8px)',
+                  border: '1px solid rgba(192, 132, 252, 0.2)',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                <Stack 
+                  direction="row" 
+                  spacing={1.5}
+                  alignItems="center"
+                >
+                  <Typography
+                    sx={{
+                      color: 'var(--text-color)',
+                      fontStyle: 'italic',
+                      lineHeight: 1.6,
+                      flex: 1
+                    }}
+                  >
+                    <span><CircularProgress size={16} sx={{ mr: 1, color: 'var(--secondary-color)' }} /></span>{funFacts[factIndex]}
+                  </Typography>
+                </Stack>
+              </Paper>
+            </Stack>
+          </Fade>
+        )}
       </Box>
       <Stack direction="row" spacing={2}>
         <TextField
