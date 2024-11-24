@@ -14,7 +14,20 @@ export default function ExhibitsPage() {
   const [rating, setRating] = useState<number | null>(null);
   const [feedback, setFeedback] = useState('');
 
-  if (isLoading) return <CogSpinner />;
+  if (isLoading) return (
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '90vh',
+        width: '100%',
+        background: 'var(--background-gradient)',
+      }}
+    >
+      <CogSpinner />
+    </Box>
+  );
   if (error) return <ErrorMessage error={error} />;
 
   const handleSubmitFeedback = () => {
