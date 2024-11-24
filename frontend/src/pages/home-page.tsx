@@ -33,7 +33,7 @@ export default function HomePage() {
     <Box
       sx={{
         position: 'relative',
-        height: '75vh',
+        height: '80vh',
         background: 'var(--background-gradient)',
         display: 'flex',
         alignItems: 'center',
@@ -44,7 +44,7 @@ export default function HomePage() {
     >
       
 
-      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1, mt: 22.5}}>
+      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1, mt: 5}}>
         <Paper
           elevation={24}
           sx={{

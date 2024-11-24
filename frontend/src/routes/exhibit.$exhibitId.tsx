@@ -1,6 +1,6 @@
 import TourPage from '../pages/tour-page'
 import { createFileRoute } from '@tanstack/react-router'
-import { PulseLoader } from 'react-spinners'
+import CogSpinner from '../components/CogSpinner'
 import { Box } from '@mui/material'
 import { useExhibit } from '../api/queries'
 
@@ -36,11 +36,12 @@ function ExhibitComponent() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
+          height: '90vh',
+          width: '100%',
           background: 'var(--background-gradient)',
         }}
       >
-        <PulseLoader color="var(--secondary)" />
+        <CogSpinner />
       </Box>
     )
   }

@@ -15,6 +15,7 @@ import RecommendedExhibits from '../components/RecommendedExhibits'
 import FeedbackSection from '../components/FeedbackSection'
 import VoiceAssistant from '../components/VoiceAssistant'
 import { useExhibit, useRecommendations, useChatWithExhibit, useExhibitDescription, useRecordVisit } from '../api/queries'
+import CogSpinner from '../components/CogSpinner'
 
 interface TourPageProps {
   exhibitId: string;
@@ -104,25 +105,18 @@ export default function TourPage({ exhibitId, userId }: TourPageProps) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%)'
+          background: 'var(--background-gradient)'
         }}
       >
         <Fade in={true}>
           <Box sx={{ textAlign: 'center' }}>
-            <CircularProgress 
-              size={60}
-              thickness={4}
-              sx={{ 
-                color: '#C084FC',
-                mb: 3
-              }}
-            />
+            <CogSpinner />
             <Typography
               variant="h5"
               sx={{
-                color: 'white',
+                color: 'var(--text-color)',
                 fontWeight: 500,
-                textShadow: '0 0 20px rgba(192, 132, 252, 0.5)'
+                mt: 3
               }}
             >
               Preparing Your Exhibition Experience...
