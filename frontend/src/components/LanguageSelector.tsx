@@ -56,6 +56,11 @@ const LanguageSelector: React.FC = () => {
           onChange={handleLanguageChange}
           startAdornment={<Language sx={{ mr: 1, color: 'var(--text-color)' }} />}
         >
+          <MenuItem value="en">English</MenuItem>
+          <MenuItem value="es">Español (Spanish)</MenuItem>
+          <MenuItem value="zh-Hans">中文 (Simplified Chinese)</MenuItem>
+          <MenuItem value="zh-Hant">中文 (Traditional Chinese)</MenuItem>
+          <MenuItem value="fr">Français (French)</MenuItem>
           <MenuItem value="af">Afrikaans</MenuItem>
           <MenuItem value="ar">العربية (Arabic)</MenuItem>
           <MenuItem value="bg">български (Bulgarian)</MenuItem>
@@ -67,14 +72,11 @@ const LanguageSelector: React.FC = () => {
           <MenuItem value="da">Dansk (Danish)</MenuItem>
           <MenuItem value="de">Deutsch (German)</MenuItem>
           <MenuItem value="el">Ελληνικά (Greek)</MenuItem>
-          <MenuItem value="en">English</MenuItem>
-          <MenuItem value="es">Español (Spanish)</MenuItem>
           <MenuItem value="et">Eesti (Estonian)</MenuItem>
           <MenuItem value="fa">فارسی (Persian)</MenuItem>
           <MenuItem value="fi">Suomi (Finnish)</MenuItem>
           <MenuItem value="fil">Filipino</MenuItem>
           <MenuItem value="fj">Fijian</MenuItem>
-          <MenuItem value="fr">Français (French)</MenuItem>
           <MenuItem value="he">עברית (Hebrew)</MenuItem>
           <MenuItem value="hi">हिंदी (Hindi)</MenuItem>
           <MenuItem value="hr">Hrvatski (Croatian)</MenuItem>
@@ -116,8 +118,6 @@ const LanguageSelector: React.FC = () => {
           <MenuItem value="vi">Tiếng Việt (Vietnamese)</MenuItem>
           <MenuItem value="yua">Yucatec Maya</MenuItem>
           <MenuItem value="yue">粵語 (Cantonese)</MenuItem>
-          <MenuItem value="zh-Hans">中文 (Simplified Chinese)</MenuItem>
-          <MenuItem value="zh-Hant">中文 (Traditional Chinese)</MenuItem>
 
         </Select>
       </FormControl>
