@@ -17,6 +17,16 @@
   --hover-bg: rgba(235, 84, 140, 0.1);
   --card-bg: rgba(255, 255, 255, 0.95);
   --backdrop-bg: rgba(255, 255, 255, 0.8);
+  /* LiveKit Theme Colors */
+  --lk-fg: var(--primary);
+  --lk-fg-secondary: var(--primary-light);
+  --lk-fg-tertiary: var(--primary-dark);
+  --lk-bg: var(--paper-bg);
+  --lk-bg-secondary: var(--card-bg);
+  --lk-bg-tertiary: var(--backdrop-bg);
+
+  --lk-accent-fg: var(--secondary);
+  --lk-accent-bg: var(--secondary-dark);
 }
 
 :root[data-theme='dark'] {
@@ -28,6 +38,15 @@
   --hover-bg: rgba(235, 84, 140, 0.1);
   --card-bg: rgba(28, 27, 76, 0.8);
   --backdrop-bg: rgba(28, 27, 76, 0.8);
+  /* LiveKit Theme Colors */
+  --livekit-fg: var(--secondary);
+  --livekit-fg-secondary: var(--primary);
+  --livekit-bg: var(--paper-bg);
+  --livekit-bg-secondary: var(--card-bg);
+  --livekit-bg-tertiary: var(--backdrop-bg);
+
+  --livekit-accent-fg: var(--secondary);
+  --livekit-accent-bg: var(--secondary-dark);
 }
 
 html,

@@ -12,11 +12,11 @@ const ComplexitySlider: React.FC<ComplexitySliderProps> = ({ complexity, setComp
   };
 
   const marks = [
-    { value: 0, label: 'Elem. School' },
-    { value: 25, label: 'Middle School' },
-    { value: 50, label: 'High School' },
+    { value: 0, label: 'Elem' },
+    { value: 25, label: 'Middle' },
+    { value: 50, label: 'High' },
     { value: 75, label: 'College' },
-    { value: 100, label: 'Graduate' },
+    { value: 100, label: 'Grad' },
   ];
 
   return (
@@ -33,19 +33,19 @@ const ComplexitySlider: React.FC<ComplexitySliderProps> = ({ complexity, setComp
           step={25}
           marks={marks}
           sx={{
-            color: 'var(--primary)',
+            color: 'var(--secondary)',
             '& .MuiSlider-thumb': {
               width: 24,
               height: 24,
               backgroundColor: 'var(--secondary)',
-              border: '2px solid var(--primary-light)',
+              border: '2px solid var(--primary)',
             },
             '& .MuiSlider-markLabel': {
               color: 'var(--text-secondary)', 
               fontSize: '0.91rem', 
             },
             '& .MuiSlider-mark': {
-              backgroundColor: 'var(--text-color)',
+              backgroundColor: 'var(--secondary)',
               width: 11,
               height: 11,
               borderRadius: '50%',
