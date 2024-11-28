@@ -17,7 +17,17 @@ bun run dev
 
 ## Running the backend
 
-TODO: @Caleb Gray
+Install UV as a package Manager
+Update the API Keys and tokens with ones that are working for Gemini, LiveKit and OpenAI.
+```bash
+cd backend/src
+uv run main.py --rewrite
+```
+and in another terminal
+```bash
+cd backend/src
+uv run livekit-serve.py
+```
 
 ## Team Members
  - Alhagie Boye
@@ -97,8 +107,8 @@ Each of the three factors (user interests, exhibit popularity, and user history)
 
 
 ### Future work
-
+- Update visitation logic to better track user history
 - Use age to filter out exhibits that are not age appropriate
-- Use location to recommend exhibits that are close to the user
+- Use location to recommend exhibits that are close to the user (done partially by features)
 - Use time of day to recommend exhibits that are open
 - Use an LLM to generate the final recommendations. 
