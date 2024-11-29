@@ -3,6 +3,8 @@ from llama_index.llms.openai import OpenAI
 from llama_index.llms.gemini import Gemini
 from llama_index.core.agent import ReActAgent
 from llama_index.core.tools import FunctionTool
+from database.crud import get_exhibit_by_title
+from database.database import SessionLocal
 import json
 from functools import partial
 import os
@@ -60,7 +62,7 @@ Your introduction to the user should be similar but not exactly 'how can I help 
 
 class ExhibitEnhancementAgent:
     def __init__(self):
-        self.llm = OpenAI(model="gpt-4o-mini", temperature=0.7)
+        self.llm = Gemini(model="models/gemini-1.5-flash", temperature=0.1)
         self.agent = self._create_agent()
 
     def _create_agent(self) -> ReActAgent:
@@ -70,6 +72,11 @@ class ExhibitEnhancementAgent:
                 fn=self.enhance_description,
                 name="enhance_description",
                 description="Enhances an exhibit description based on user interests and complexity"
+            ),
+            FunctionTool.from_defaults(
+                fn=self.search,
+                name="search",
+                description="Searches for an exhibit by title and returns the details of the exhibit"
             )
         ]
         return ReActAgent.from_tools(tools, llm=self.llm, verbose=True)
@@ -86,6 +93,15 @@ class ExhibitEnhancementAgent:
         except Exception as e:
             print(f"Enhancement failed: {str(e)}")
             return description
+    
+    def search(self, exhibit_title: str):
+        """This is a function that will search for an exhibit by title and return the details of the exhibit"""
+        db = SessionLocal()
+        try:
+            exhibit = get_exhibit_by_title(db, exhibit_title)
+            return str(exhibit.details) if exhibit else ""
+        finally:
+            db.close()
 
     def _build_enhancement_prompt(self, description: str, interests: Dict[str, float], complexity: int) -> str:
         return f"""You are an expert museum curator and science communicator.
@@ -107,7 +123,7 @@ Give a few fun facts that are tailored to the interests and complexity level spe
 
 class FactCheckingAgent:
     def __init__(self):
-        self.llm = OpenAI(model="gpt-4o-mini", temperature=0.1)
+        self.llm = Gemini(model="models/gemini-1.5-flash", temperature=0.1)
         self.agent = self._create_agent()
 
     def _create_agent(self) -> ReActAgent:

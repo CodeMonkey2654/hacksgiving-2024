@@ -1,5 +1,5 @@
 import { Box, Container, Typography, Button, Paper, Stack } from '@mui/material'
-import { Settings, Explore } from '@mui/icons-material'
+import { Settings, Explore, Translate, Psychology } from '@mui/icons-material'
 import { useState, useEffect } from 'react'
 import { useMediaQuery, useTheme } from '@mui/material'
 import FeatureCard from '../components/FeatureCard'
@@ -14,16 +14,24 @@ export default function HomePage() {
   const features = [
     {
       icon: <Settings sx={{ color: 'var(--secondary)' }} />,
-      title: 'Personalized Experience',
-      description: 'Your journey will be tailored to your interests and preferences',
+      title: 'Smart Recommendations',
+      description: 'Our AI learns from your interests and past visits to suggest the perfect exhibits for you',
       bgColor: 'var(--paper-bg)',
       hoverBgColor: 'var(--paper-bg)',
       iconColor: 'var(--paper-bg)'
     },
     {
-      icon: <Explore sx={{ color: 'var(--secondary)' }} />,
-      title: 'Guided Discovery',
-      description: 'Interactive tours help you explore and learn at your own pace',
+      icon: <Translate sx={{ color: 'var(--secondary)' }} />,
+      title: 'Multilingual Support',
+      description: 'Experience exhibits in your preferred language with our advanced translation system',
+      bgColor: 'var(--paper-bg)',
+      hoverBgColor: 'var(--paper-bg)',
+      iconColor: 'var(--paper-bg)'
+    },
+    {
+      icon: <Psychology sx={{ color: 'var(--secondary)' }} />,
+      title: 'Adaptive Learning',
+      description: 'Content automatically adjusts to match your knowledge level and interests',
       bgColor: 'var(--paper-bg)',
       hoverBgColor: 'var(--paper-bg)',
       iconColor: 'var(--paper-bg)'

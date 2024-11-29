@@ -10,13 +10,10 @@ import { useEffect, useState } from "react";
 import { AccessToken } from 'livekit-server-sdk';
 import { Box, IconButton, Typography } from '@mui/material';
 import MicIcon from '@mui/icons-material/Mic';
-import dotenv from 'dotenv';
 
-dotenv.config();
-
-const LIVEKIT_API_KEY = process.env.REACT_APP_LIVEKIT_API_KEY;
-const LIVEKIT_API_SECRET = process.env.REACT_APP_LIVEKIT_API_SECRET;
-const LIVEKIT_URL = process.env.REACT_APP_LIVEKIT_URL;
+const LIVEKIT_API_KEY = 'APIPdt7brNQ5fhi';
+const LIVEKIT_API_SECRET = 'VtgAfVCvldWCMlKkcBPvZcOf0sO0AiGppu9MGzjCnZU';
+const LIVEKIT_URL = 'wss://hackathon-f4yb1eyf.livekit.cloud';
 
 
 function SimpleVoiceAssistant() {

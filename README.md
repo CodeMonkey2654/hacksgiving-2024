@@ -16,16 +16,19 @@ bun run dev
 ```
 
 ## Running the backend
-
-TODO: @Caleb Gray
+Feel free to re-update the database using `--rewrite` flag.
+```bash
+cd backend
+uv run main.py
+```
 
 ## Team Members
- - Alhagie Boye
- - Olek Drobek
+ - Alhagie Boye (Head Translator)
+ - Olek Drobek (RAG Thought Leader)
  - Sonia Grade
  - Caleb Gray (The Beast)
- - Autumn Mizer
- - Alex Neher
+ - Autumn Mizer (Head UX Designer)
+ - Alex Neher (DB Architect)
  - Bart Gebka
 
 
